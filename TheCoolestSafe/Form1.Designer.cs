@@ -79,6 +79,7 @@
             firstPrevious1.Location = new Point(172, 24);
             firstPrevious1.MaxLength = 3;
             firstPrevious1.Name = "firstPrevious1";
+            firstPrevious1.ReadOnly = true;
             firstPrevious1.Size = new Size(33, 31);
             firstPrevious1.TabIndex = 5;
             // 
@@ -96,6 +97,7 @@
             firstPrevious2.Location = new Point(211, 24);
             firstPrevious2.MaxLength = 3;
             firstPrevious2.Name = "firstPrevious2";
+            firstPrevious2.ReadOnly = true;
             firstPrevious2.Size = new Size(33, 31);
             firstPrevious2.TabIndex = 7;
             // 
@@ -104,6 +106,7 @@
             firstPrevious3.Location = new Point(250, 24);
             firstPrevious3.MaxLength = 3;
             firstPrevious3.Name = "firstPrevious3";
+            firstPrevious3.ReadOnly = true;
             firstPrevious3.Size = new Size(33, 31);
             firstPrevious3.TabIndex = 8;
             // 
@@ -112,6 +115,7 @@
             secondPrevious3.Location = new Point(250, 61);
             secondPrevious3.MaxLength = 3;
             secondPrevious3.Name = "secondPrevious3";
+            secondPrevious3.ReadOnly = true;
             secondPrevious3.Size = new Size(33, 31);
             secondPrevious3.TabIndex = 9;
             // 
@@ -120,6 +124,7 @@
             secondPrevious2.Location = new Point(211, 61);
             secondPrevious2.MaxLength = 3;
             secondPrevious2.Name = "secondPrevious2";
+            secondPrevious2.ReadOnly = true;
             secondPrevious2.Size = new Size(33, 31);
             secondPrevious2.TabIndex = 10;
             // 
@@ -128,6 +133,7 @@
             secondPrevious1.Location = new Point(172, 61);
             secondPrevious1.MaxLength = 3;
             secondPrevious1.Name = "secondPrevious1";
+            secondPrevious1.ReadOnly = true;
             secondPrevious1.Size = new Size(33, 31);
             secondPrevious1.TabIndex = 11;
             // 
@@ -147,6 +153,7 @@
             thirdPlayerNumber.Name = "thirdPlayerNumber";
             thirdPlayerNumber.Size = new Size(33, 31);
             thirdPlayerNumber.TabIndex = 13;
+            thirdPlayerNumber.KeyPress += PlayerNumber_KeyPress;
             // 
             // secondPlayerNumber
             // 
@@ -155,6 +162,7 @@
             secondPlayerNumber.Name = "secondPlayerNumber";
             secondPlayerNumber.Size = new Size(33, 31);
             secondPlayerNumber.TabIndex = 14;
+            secondPlayerNumber.KeyPress += PlayerNumber_KeyPress;
             // 
             // firstPlayerNumber
             // 
@@ -163,7 +171,7 @@
             firstPlayerNumber.Name = "firstPlayerNumber";
             firstPlayerNumber.Size = new Size(33, 31);
             firstPlayerNumber.TabIndex = 15;
-            firstPlayerNumber.KeyPress += firstPlayerNumber_KeyPress;
+            firstPlayerNumber.KeyPress += PlayerNumber_KeyPress;
             // 
             // displayCorrectCode
             // 

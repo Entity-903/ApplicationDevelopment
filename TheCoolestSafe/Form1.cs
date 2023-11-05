@@ -69,12 +69,12 @@ namespace TheCoolestSafe
                     case 2: // Hot
                         howClose1.Text = "Hot";
                         // change image here
-                        currentImage.Image = new Bitmap("../../../SafeImages/SlightlyOpenSafe.jpg");
+                        currentImage.Image = new Bitmap("../../../SafeImages/AlmostOpenSafe.jpg");
                         break;
                     case 3: // AHHHHHHH!(Correct)
                         howClose1.Text = "AHHHHHHH";
                         // change image here
-                        currentImage.Image = new Bitmap("OpenSafe.jpg");
+                        currentImage.Image = new Bitmap("../../../SafeImages/OpenSafe.jpg");
                         winGame = true;
                         break;
                     default: // Game Breaks
@@ -85,6 +85,7 @@ namespace TheCoolestSafe
                 if (winGame == true && numGuesses >= 0)
                 {
                     displayGameOver.Text = "You cracked the code!";
+                    checkGuess.Enabled = false;
                 }
                 else if (winGame == false && numGuesses <= 0)
                 {
@@ -107,9 +108,9 @@ namespace TheCoolestSafe
 
         private void GenerateCode()
         {
-            firstValue = random.Next(1, 9);
-            secondValue = random.Next(1, 9);
-            thirdValue = random.Next(1, 9);
+            firstValue = random.Next(0, 10);
+            secondValue = random.Next(0, 10);
+            thirdValue = random.Next(0, 10);
         }
 
         private void displayPreviousGuesses_Enter(object sender, EventArgs e)
@@ -121,9 +122,7 @@ namespace TheCoolestSafe
         {
             checkGuess.Enabled = true;
 
-            firstValue = random.Next(1, 9);
-            secondValue = random.Next(1, 9);
-            thirdValue = random.Next(1, 9);
+            GenerateCode();
 
             displayCorrectCode.Text = "";
 
@@ -150,14 +149,12 @@ namespace TheCoolestSafe
 
         }
 
-        //TODO: Get images for program
-
         private void ExitGame_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void firstPlayerNumber_KeyPress(object sender, KeyPressEventArgs e)
+        private void PlayerNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
