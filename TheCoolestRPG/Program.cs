@@ -1,3 +1,5 @@
+using System.Media;
+
 namespace TheCoolestRPG
 {
     internal static class Program
@@ -15,8 +17,9 @@ namespace TheCoolestRPG
             // How we open new instances of forms
 
             Application.Run(new CreateCharacterUI());
-        }
 
+            Application.Run(new Dialogue());
+        }
 
     }
 }
