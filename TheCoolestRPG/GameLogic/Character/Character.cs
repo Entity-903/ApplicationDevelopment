@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 
 /* Defines each character
  * 
- * Utilizes CharacterTraits to define the character
- * 
- * Determines the actions a character will make and run calculations based on values from CharacterTraits
+ * Determines the actions a character will make and run calculations
  * 
  * Stores characters in their respective locations 
  * Player will be by themselves, 1 character; Might give the player aid in the form of another character that fights alongside the main character

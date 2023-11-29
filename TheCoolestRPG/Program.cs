@@ -15,10 +15,15 @@ namespace TheCoolestRPG
             ApplicationConfiguration.Initialize();
 
             // How we open new instances of forms
+            // Next form opens when the previous one closes
 
             Application.Run(new CreateCharacterUI());
 
-            Application.Run(new Dialogue());
+            // Opens once CreateCharacterUI is closed
+            Application.Run(new DialogueUI());
+
+            // Opens once DialogueUI is closed
+            Application.Run(new CombatUI());
         }
 
     }

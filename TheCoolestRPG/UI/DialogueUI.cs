@@ -7,14 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheCoolestRPG.GameLogic.Story;
 
 namespace TheCoolestRPG
 {
-    public partial class Dialogue : Form
+    public partial class DialogueUI : Form
     {
-        public Dialogue()
+        public DialogueUI()
         {
             InitializeComponent();
         }
+
+        private void btnContinue_Click(object sender, EventArgs e)
+        {
+            Story.ProgressStory();
+            Close();
+        }
+
+
     }
+
+
+
+
 }

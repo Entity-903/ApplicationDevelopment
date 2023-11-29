@@ -35,6 +35,8 @@ namespace TheCoolestRPG
             uint charismaModifier = (uint)((charisma) * 0.25f);
 
             Character player = new Character(10 * constitution, Character.Type.custom, strength, strengthModifier, dexterity, dexterityModifier, intelligence, intelligenceModifier, constitution, constitutionModifier, wisdom, wisdomModifier, charisma, charismaModifier);
+
+            Close();
         }
 
         private void numericStrength_ValueChanged(object sender, EventArgs e)
