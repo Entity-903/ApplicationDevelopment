@@ -31,7 +31,13 @@
             groupBox1 = new GroupBox();
             txtCurrentDialogue = new TextBox();
             DialogueOptions = new GroupBox();
+            btnConfirm = new Button();
+            btnDeny = new Button();
             btnContinue = new Button();
+            btnAvoid = new Button();
+            btnApproach = new Button();
+            btnRecall = new Button();
+            btnCombatStart = new Button();
             DialogueOptions.SuspendLayout();
             SuspendLayout();
             // 
@@ -47,17 +53,24 @@
             // txtCurrentDialogue
             // 
             txtCurrentDialogue.Enabled = false;
+            txtCurrentDialogue.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             txtCurrentDialogue.Location = new Point(243, 373);
             txtCurrentDialogue.Multiline = true;
             txtCurrentDialogue.Name = "txtCurrentDialogue";
             txtCurrentDialogue.Size = new Size(694, 150);
             txtCurrentDialogue.TabIndex = 0;
-            txtCurrentDialogue.Text = "Sample Dialogue";
+            txtCurrentDialogue.Text = "Start with Path(0)[0]";
             txtCurrentDialogue.TextAlign = HorizontalAlignment.Center;
             // 
             // DialogueOptions
             // 
+            DialogueOptions.Controls.Add(btnCombatStart);
+            DialogueOptions.Controls.Add(btnConfirm);
+            DialogueOptions.Controls.Add(btnDeny);
             DialogueOptions.Controls.Add(btnContinue);
+            DialogueOptions.Controls.Add(btnAvoid);
+            DialogueOptions.Controls.Add(btnApproach);
+            DialogueOptions.Controls.Add(btnRecall);
             DialogueOptions.Location = new Point(157, 529);
             DialogueOptions.Name = "DialogueOptions";
             DialogueOptions.Size = new Size(858, 150);
@@ -65,15 +78,81 @@
             DialogueOptions.TabStop = false;
             DialogueOptions.Text = "DialogueOptionsGoHere";
             // 
+            // btnConfirm
+            // 
+            btnConfirm.Location = new Point(172, 83);
+            btnConfirm.Name = "btnConfirm";
+            btnConfirm.Size = new Size(261, 61);
+            btnConfirm.TabIndex = 6;
+            btnConfirm.Text = "Confirm";
+            btnConfirm.UseVisualStyleBackColor = true;
+            btnConfirm.Visible = false;
+            btnConfirm.Click += btnConfirm_Click;
+            // 
+            // btnDeny
+            // 
+            btnDeny.Location = new Point(439, 83);
+            btnDeny.Name = "btnDeny";
+            btnDeny.Size = new Size(261, 61);
+            btnDeny.TabIndex = 7;
+            btnDeny.Text = "Deny (Charisma)";
+            btnDeny.UseVisualStyleBackColor = true;
+            btnDeny.Visible = false;
+            btnDeny.Click += btnDeny_Click;
+            // 
             // btnContinue
             // 
             btnContinue.Location = new Point(305, 83);
             btnContinue.Name = "btnContinue";
-            btnContinue.Size = new Size(249, 61);
+            btnContinue.Size = new Size(261, 61);
             btnContinue.TabIndex = 0;
             btnContinue.Text = "Continue";
             btnContinue.UseVisualStyleBackColor = true;
             btnContinue.Click += btnContinue_Click;
+            // 
+            // btnAvoid
+            // 
+            btnAvoid.Location = new Point(439, 83);
+            btnAvoid.Name = "btnAvoid";
+            btnAvoid.Size = new Size(261, 61);
+            btnAvoid.TabIndex = 4;
+            btnAvoid.Text = "Avoid";
+            btnAvoid.UseVisualStyleBackColor = true;
+            btnAvoid.Visible = false;
+            btnAvoid.Click += btnAvoid_Click;
+            // 
+            // btnApproach
+            // 
+            btnApproach.Location = new Point(172, 83);
+            btnApproach.Name = "btnApproach";
+            btnApproach.Size = new Size(261, 61);
+            btnApproach.TabIndex = 3;
+            btnApproach.Text = "Approach";
+            btnApproach.UseVisualStyleBackColor = true;
+            btnApproach.Visible = false;
+            btnApproach.Click += btnApproach_Click;
+            // 
+            // btnRecall
+            // 
+            btnRecall.Location = new Point(305, 16);
+            btnRecall.Name = "btnRecall";
+            btnRecall.Size = new Size(261, 61);
+            btnRecall.TabIndex = 5;
+            btnRecall.Text = "Recall (Wisdom)";
+            btnRecall.UseVisualStyleBackColor = true;
+            btnRecall.Visible = false;
+            btnRecall.Click += btnCheckFamiliarity_Click;
+            // 
+            // btnCombatStart
+            // 
+            btnCombatStart.Location = new Point(305, 83);
+            btnCombatStart.Name = "btnCombatStart";
+            btnCombatStart.Size = new Size(261, 67);
+            btnCombatStart.TabIndex = 3;
+            btnCombatStart.Text = "Fight";
+            btnCombatStart.UseVisualStyleBackColor = true;
+            btnCombatStart.Visible = false;
+            btnCombatStart.Click += btnCombatStart_Click;
             // 
             // DialogueUI
             // 
@@ -98,5 +177,11 @@
         private Button btnContinue;
         private TextBox txtCurrentDialogue;
         private Label CurrentDialogueText;
+        private Button btnApproach;
+        private Button btnAvoid;
+        private Button btnRecall;
+        private Button btnConfirm;
+        private Button btnDeny;
+        private Button btnCombatStart;
     }
 }

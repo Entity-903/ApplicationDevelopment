@@ -57,7 +57,7 @@ namespace TheCoolestRPG.GameLogic.Character
 
             goblin,// can perform dexterity, strength, or intelligence actions; +2 on dexterity and strength, -1 on intelligence
             skeleton, // strength
-            zombie, // strength, flesh acts as a protective shell
+            zombie, // strength, turn into skeletons upon death
             necromancer // Can perform a variety of attacks; +2 on intelligence, constitution; +1 on wisdom, charisma; -2 on dexterity;
 
         }

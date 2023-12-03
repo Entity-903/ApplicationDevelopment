@@ -1,6 +1,6 @@
 ﻿namespace TheCoolestRPG
 {
-    partial class CreateCharacterUI
+    partial class CharacterCreation
     {
         /// <summary>
         /// Required designer variable.
