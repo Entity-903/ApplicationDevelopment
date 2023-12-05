@@ -22,7 +22,7 @@ using System.Threading.Tasks;
 
 namespace TheCoolestRPG.GameLogic.Character
 {
-    internal class Character
+    public class Character
     {
         public Character(uint health, Type type, uint strength, uint strengthModifier, uint dexterity, uint dexterityModifier, uint intelligence, uint intelligenceModifier, uint constitution, uint constitutionModifier, uint wisdom, uint wisdomModifier, uint charisma, uint charismaModifier) 
         {

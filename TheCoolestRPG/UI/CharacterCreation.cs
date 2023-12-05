@@ -14,7 +14,9 @@ namespace TheCoolestRPG
 {
     public partial class CharacterCreation : Form
     {
-        static Character player;
+        private static Character? player;
+        private static Character[]? enemies = new Character[3];
+
         private static bool playerExists = false;
 
         public CharacterCreation()
@@ -26,35 +28,54 @@ namespace TheCoolestRPG
         {
             playerExists = true;
 
-            uint strength = (uint)numericStrength.Value;
-            uint dexterity = (uint)numericDexterity.Value;
-            uint intelligence = (uint)numericIntelligence.Value;
-            uint constitution = (uint)numericConstitution.Value;
-            uint wisdom = (uint)numericWisdom.Value;
-            uint charisma = (uint)numericCharisma.Value;
+            uint strength             = (uint)numericStrength.Value;
+            uint dexterity            = (uint)numericDexterity.Value;
+            uint intelligence         = (uint)numericIntelligence.Value;
+            uint constitution         = (uint)numericConstitution.Value;
+            uint wisdom               = (uint)numericWisdom.Value;
+            uint charisma             = (uint)numericCharisma.Value;
 
-            uint strengthModifier = (uint)((strength) * 0.25f);
-            uint dexterityModifier = (uint)((dexterity) * 0.25f);
+            uint strengthModifier     = (uint)((strength) * 0.25f);
+            uint dexterityModifier    = (uint)((dexterity) * 0.25f);
             uint intelligenceModifier = (uint)((intelligence) * 0.25f);
             uint constitutionModifier = (uint)((constitution) * 0.25f);
-            uint wisdomModifier = (uint)((wisdom) * 0.25f);
-            uint charismaModifier = (uint)((charisma) * 0.25f);
+            uint wisdomModifier       = (uint)((wisdom) * 0.25f);
+            uint charismaModifier     = (uint)((charisma) * 0.25f);
 
             player = new Character(10 * constitution, Character.Type.custom, strength, strengthModifier, dexterity, dexterityModifier, intelligence, intelligenceModifier, constitution, constitutionModifier, wisdom, wisdomModifier, charisma, charismaModifier);
+            
+            uint zombieStrength     = 13;
+            uint zombieDexterity    = 8;
+            uint zombieIntelligence = 7;
+            uint zombieConstitution = 10;
+            uint zombieWisdom       = 1;
+            uint zombieCharisma     = 0;
+
+            uint zombieStrengthModifier     = (uint)((zombieStrength) * 0.25f);
+            uint zombieDexterityModifier    = (uint)((zombieDexterity) * 0.25f);
+            uint zombieIntelligenceModifier = (uint)((zombieIntelligence) * 0.25f);
+            uint zombieConstitutionModifier = (uint)((zombieConstitution) * 0.25f);
+            uint zombieWisdomModifier       = (uint)((zombieWisdom) * 0.25f);
+            uint zombieCharismaModifier = (uint)((zombieCharisma) * 0.25f);
+
+            for (int i = 0; i < 3; i++)
+            {
+                enemies[i] = new Character(10 * zombieConstitution, Character.Type.zombie, zombieStrength, zombieStrengthModifier, zombieDexterity, zombieDexterityModifier, zombieIntelligence, zombieIntelligenceModifier, zombieConstitution, zombieConstitutionModifier, zombieWisdom, zombieWisdomModifier, zombieCharisma, zombieCharismaModifier);
+            }
 
             Close();
         }
 
         public static bool GetPlayerExists()
         {
-            return playerExists;
+            return (player != null);
         }
 
-        //public static Character GetPlayerCharacter()
-        //{
-        //    if (playerExists) return player;
-        //    else return new Character(0, Character.Type.custom, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-        //}
+        public static Character? GetPlayerCharacter()
+        {
+            if (player != null) return player;
+            else return null;
+        }
 
         private void numericStrength_ValueChanged(object sender, EventArgs e)
         {

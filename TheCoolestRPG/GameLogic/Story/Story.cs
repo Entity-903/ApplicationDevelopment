@@ -46,8 +46,7 @@ namespace TheCoolestRPG.GameLogic.Story
 
         public static void ProgressChoice(int value)
         {
-            if (value < 0) currentStory -= (uint)value;
-            else currentStory += (uint)value;
+            currentStory += (uint)value;
         }
 
         public static void ResetStoryArray()
@@ -55,10 +54,15 @@ namespace TheCoolestRPG.GameLogic.Story
             currentStoryString = 0;
         }
 
+        public static void SetStoryArray(int value)
+        {
+            currentStoryString = (uint)value;
+        }
+
         // Initializes and Stores various lines of dialogue in logic
 
-            // Finds the array currently being accessed
-            public static string[] Path(uint currentStory)
+        // Finds the array currently being accessed
+        public static string[] Path(uint currentStory)
             {
                 switch (currentStory)
                 {
@@ -89,7 +93,6 @@ namespace TheCoolestRPG.GameLogic.Story
         // Arrays containing portions of dialogue
         private static string[] GetStoryOrigin() // 0
         { 
-            story = new string[MAX_STRINGS];
             story[0] = "You still exist, don't think too hard about it.";
             story[1] = "Anyway, with nothing better to do, you start wandering around.";
             story[2] = "Off in the distance, you spot a body of water, approach it?";
@@ -102,14 +105,11 @@ namespace TheCoolestRPG.GameLogic.Story
         // Approach
         private static string[] GetStoryApproach() // 1
         {
-            story = new string[MAX_STRINGS];
             story[0] = "You approach the lake and notice corpses floating on the surface.";
             story[1] = "While mostly decayed, identifiable features are still intact.";
             story[2] = "We would like to know, do you recognize the bodies in the water?";
 
-            // Yes or No(CheckBluff)
-            // |
-            // You were, in fact, dead, albeit not for long.
+            // Confirm or Deny (CheckBluff)
 
             return story;
         }
@@ -117,7 +117,6 @@ namespace TheCoolestRPG.GameLogic.Story
         // Avoid
         private static string[] GetStoryAvoid() // 2
         {
-            story = new string[MAX_STRINGS];
             story[0] = "Through either knowledge or gut feeling, you choose to avoid the lake.";
             story[1] = "You continue to wander this vast forest with nowhere to go...";
             story[2] = "And no one to return to.";
@@ -129,7 +128,6 @@ namespace TheCoolestRPG.GameLogic.Story
         // CheckFamiliarity
         private static string[] GetStoryCheckFamiliarity() // 3
         {
-            story = new string[MAX_STRINGS];
             // If pass wisdom check
             story[0] = "You recall a website that discusses phenomenon similar to this.";
             story[1] = "The site refers to this as SCP-2316.";
@@ -148,7 +146,6 @@ namespace TheCoolestRPG.GameLogic.Story
             // if (firstCharismaRoll > secondCharismaRoll) roll lakeCharisma
             // bool lakeTolerance = (firstCharismaRoll > lakeCharisma) ? true : false;
 
-            story = new string[MAX_STRINGS];
             // If personal bluff succeeds and lake entertains you
             story[0] = "You convince yourself that you have no relation to the bodies.";
             story[1] = "The lake, in spite of recent events, entertains you, and gives you no trouble.";
@@ -166,7 +163,6 @@ namespace TheCoolestRPG.GameLogic.Story
         // Confirm
         private static string[] GetStoryRecognize() // 5
         {
-            story = new string[MAX_STRINGS];
 
             story[0] = "You recognize the bodies in the water...";
             story[1] = "And the lake simply cannot let you leave."; // Triggers combat
@@ -177,7 +173,6 @@ namespace TheCoolestRPG.GameLogic.Story
         // This shouldn't occur in functioning circumstances
         private static string[] GetCurrentStoryError()
         {
-            story = new string[MAX_STRINGS];
             story[0] = "currentStory has exceeded boundaries";
             return story;
         }

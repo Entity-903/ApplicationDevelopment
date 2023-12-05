@@ -38,14 +38,14 @@ namespace TheCoolestRPG
             if (Story.GetCurrentStory() == 1 && Story.GetCurrentStoryString() == 2)
             {
                 btnContinue.Visible = false;
+
+                btnConfirm.Visible = true;
+                btnDeny.Visible = true;
             }
 
             if (Story.GetCurrentStory() == 2 && Story.GetCurrentStoryString() == 3)
             {
                 btnContinue.Visible = false;
-
-                btnApproach.Visible = true;
-                btnAvoid.Visible = true;
             }
 
             if (Story.GetCurrentStory() == 3 && Story.GetCurrentStoryString() == 2)
@@ -91,6 +91,8 @@ namespace TheCoolestRPG
             txtCurrentDialogue.Text = Story.GetCurrentStoryText();
         }
 
+        // Choice Buttons
+
         private void btnApproach_Click(object sender, EventArgs e)
         {
             // Player approaches the lake
@@ -101,7 +103,7 @@ namespace TheCoolestRPG
             btnAvoid.Visible    = false;
             btnRecall.Visible   = false;
 
-            Story.ProgressChoice( (Story.GetCurrentStory() == 0) ? 1 : -2);
+            Story.ProgressChoice((Story.GetCurrentStory() == 0) ? 1 : -2);
             Story.ResetStoryArray();
             txtCurrentDialogue.Text = Story.GetCurrentStoryText();
         }
@@ -123,8 +125,9 @@ namespace TheCoolestRPG
         private void btnCheckFamiliarity_Click(object sender, EventArgs e)
         {
             // Player rolls a wisdom check to attempt remembering where the player has heard of the lake before
+            bool pass = CharacterActions.GetWisdomSuccess(CharacterCreation.GetPlayerCharacter().getWisdom(), CharacterCreation.GetPlayerCharacter().getWisdomModifier(), 7, 1);
 
-            
+            Story.ProgressChoice(3);
 
             btnContinue.Visible = true;
 
@@ -132,7 +135,7 @@ namespace TheCoolestRPG
             btnAvoid.Visible = false;
             btnRecall.Visible = false;
 
-            Story.ResetStoryArray();
+            Story.SetStoryArray((pass) ? 0 : 3);
             txtCurrentDialogue.Text = Story.GetCurrentStoryText();
         }
 
@@ -145,6 +148,7 @@ namespace TheCoolestRPG
             btnConfirm.Visible = false;
             btnDeny.Visible = false;
 
+            Story.ProgressChoice(4);
             Story.ResetStoryArray();
             txtCurrentDialogue.Text = Story.GetCurrentStoryText();
         }
@@ -152,20 +156,37 @@ namespace TheCoolestRPG
         private void btnDeny_Click(object sender, EventArgs e)
         {
             // Player claims to not recognize the bodies in the water
+            bool lakeAmusement = new Random().Next(0, 2) == 1;
+
 
             // Check if player believes it themselves
+            bool pass = CharacterActions.GetCharismaSuccess(CharacterCreation.GetPlayerCharacter().getCharisma(), 
+                                                            CharacterCreation.GetPlayerCharacter().getCharismaModifier(), 
+                                                            CharacterCreation.GetPlayerCharacter().getCharisma(), 
+                                                            CharacterCreation.GetPlayerCharacter().getCharismaModifier());
 
-            //CharacterActions.GetCharismaSuccess(/**/); // Figure out what to pass here
+            Story.ProgressChoice(3);
 
-            // if player does believe, roll for lake's desire to entertain
-            bool lakeAmusement = (new Random().Next(0, 1) == 1);
-
+            // does player fail check?
+            if (!pass)
+            { 
+                Story.SetStoryArray(5);
+            }
+            // does lake fail to entertain?
+            else if (!lakeAmusement) 
+            {
+                Story.SetStoryArray(3);
+            }
+            else
+            {
+                Story.ResetStoryArray();
+            }
+            
             btnContinue.Visible = true;
 
             btnConfirm.Visible = false;
             btnDeny.Visible = false;
 
-            Story.ResetStoryArray();
             txtCurrentDialogue.Text = Story.GetCurrentStoryText();
         }
 
