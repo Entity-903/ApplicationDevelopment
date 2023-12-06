@@ -56,7 +56,7 @@ namespace TheCoolestRPG
             uint zombieIntelligenceModifier = (uint)((zombieIntelligence) * 0.25f);
             uint zombieConstitutionModifier = (uint)((zombieConstitution) * 0.25f);
             uint zombieWisdomModifier       = (uint)((zombieWisdom) * 0.25f);
-            uint zombieCharismaModifier = (uint)((zombieCharisma) * 0.25f);
+            uint zombieCharismaModifier     = (uint)((zombieCharisma) * 0.25f);
 
             for (int i = 0; i < 3; i++)
             {
@@ -64,6 +64,11 @@ namespace TheCoolestRPG
             }
 
             Close();
+        }
+
+        public static Character[] GetEnemies()
+        {
+            return enemies;
         }
 
         public static bool GetPlayerExists()

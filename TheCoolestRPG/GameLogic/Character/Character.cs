@@ -52,7 +52,6 @@ namespace TheCoolestRPG.GameLogic.Character
             politician,  // charisma, otherwise known as Pacifist Route; 
 
             // Undead enemies have no charisma, but are immune to charisma-based actions, since their wills are tied to their summoner
-            // Undead enemies have no constitution, but have built-in defense via flesh
             // Attacks against zombies that affect the skeleton will, after damage calculation, reduce the enemiy's max health
 
             goblin,// can perform dexterity, strength, or intelligence actions; +2 on dexterity and strength, -1 on intelligence
@@ -107,7 +106,7 @@ namespace TheCoolestRPG.GameLogic.Character
 
         private uint constitutionModifier = 0;
 
-        private uint wisdom = 0; // Dodge, can also enhance attacks by taking opponents by surprise, dealing 2x additional damage; Allows for the ability to check the stats of an opponent; Philosophers do a bit of trolling
+        private uint wisdom = 0; // Dodge, can also enhance attacks by taking opponents by surprise, dealing *(wisdomsuccess) additional damage; Allows for the ability to check the stats of an opponent; Philosophers do a bit of trolling
 
         // If roll succeeds, dodge attack; Also, deal double damage on next attack (stacks)
         // If damaged, lose dodge stacks;
@@ -119,6 +118,16 @@ namespace TheCoolestRPG.GameLogic.Character
         // Worry about charisma calculation last, since it functions primarily on dialogue interactions
 
         private uint charismaModifier = 0;
+
+        public uint GetHealth()
+        {
+            return health;
+        }
+
+        public void DamageHealth(int value)
+        {
+            if (value > 0) health -= (uint)value;
+        }
 
         public uint getStrength()
         {
@@ -178,6 +187,11 @@ namespace TheCoolestRPG.GameLogic.Character
         public uint getCharismaModifier()
         {
             return charismaModifier;
+        }
+
+        public Type GetCharacterType() 
+        {
+            return type;
         }
     }
 }

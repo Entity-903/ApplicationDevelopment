@@ -31,13 +31,13 @@
             groupBox1 = new GroupBox();
             txtCurrentDialogue = new TextBox();
             DialogueOptions = new GroupBox();
+            btnCombatStart = new Button();
             btnConfirm = new Button();
             btnDeny = new Button();
             btnContinue = new Button();
             btnAvoid = new Button();
             btnApproach = new Button();
             btnRecall = new Button();
-            btnCombatStart = new Button();
             DialogueOptions.SuspendLayout();
             SuspendLayout();
             // 
@@ -77,6 +77,17 @@
             DialogueOptions.TabIndex = 2;
             DialogueOptions.TabStop = false;
             DialogueOptions.Text = "DialogueOptionsGoHere";
+            // 
+            // btnCombatStart
+            // 
+            btnCombatStart.Location = new Point(305, 83);
+            btnCombatStart.Name = "btnCombatStart";
+            btnCombatStart.Size = new Size(261, 61);
+            btnCombatStart.TabIndex = 3;
+            btnCombatStart.Text = "Fight";
+            btnCombatStart.UseVisualStyleBackColor = true;
+            btnCombatStart.Visible = false;
+            btnCombatStart.Click += btnCombatStart_Click;
             // 
             // btnConfirm
             // 
@@ -142,17 +153,6 @@
             btnRecall.UseVisualStyleBackColor = true;
             btnRecall.Visible = false;
             btnRecall.Click += btnCheckFamiliarity_Click;
-            // 
-            // btnCombatStart
-            // 
-            btnCombatStart.Location = new Point(305, 83);
-            btnCombatStart.Name = "btnCombatStart";
-            btnCombatStart.Size = new Size(261, 67);
-            btnCombatStart.TabIndex = 3;
-            btnCombatStart.Text = "Fight";
-            btnCombatStart.UseVisualStyleBackColor = true;
-            btnCombatStart.Visible = false;
-            btnCombatStart.Click += btnCombatStart_Click;
             // 
             // DialogueUI
             // 

@@ -37,83 +37,84 @@
             labelEnemyCharismaLeft = new Label();
             labelEnemyWisdomLeft = new Label();
             enemyDataLeft = new GroupBox();
-            displayEnemyTypeLeft = new Label();
+            txtEnemyTypeLeft = new Label();
             labelEnemyTypeLeft = new Label();
-            enemyDexterityModifierLeft = new Label();
-            enemyIntelligenceModifierLeft = new Label();
-            enemyConstitutionModifierLeft = new Label();
-            enemyWisdomModifierLeft = new Label();
-            enemyCharismaModifierLeft = new Label();
-            enemyStrengthModifierLeft = new Label();
-            displayEnemyDexterityLeft = new Label();
-            displayEnemyStrengthLeft = new Label();
-            displayEnemyConstitutionLeft = new Label();
-            displayEnemyCharismaLeft = new Label();
-            displayEnemyHealthLeft = new Label();
-            displayEnemyIntelligenceLeft = new Label();
-            displayEnemyNameLeft = new Label();
-            displayEnemyWisdomLeft = new Label();
+            txtEnemyDexterityModifierLeft = new Label();
+            txtEnemyIntelligenceModifierLeft = new Label();
+            txtEnemyConstitutionModifierLeft = new Label();
+            txtEnemyWisdomModifierLeft = new Label();
+            txtEnemyCharismaModifierLeft = new Label();
+            txtEnemyStrengthModifierLeft = new Label();
+            txtEnemyDexterityLeft = new Label();
+            txtEnemyStrengthLeft = new Label();
+            txtEnemyConstitutionLeft = new Label();
+            txtEnemyCharismaLeft = new Label();
+            txtEnemyHealthLeft = new Label();
+            txtEnemyIntelligenceLeft = new Label();
+            txtEnemyNameLeft = new Label();
+            txtEnemyWisdomLeft = new Label();
             enemyDataCenter = new GroupBox();
-            displayEnemyTypeCenter = new Label();
+            txtEnemyTypeCenter = new Label();
             labelEnemyNameCenter = new Label();
             labelEnemyTypeCenter = new Label();
             labelEnemyHealthCenter = new Label();
-            enemyDexterityModifierCenter = new Label();
+            txtEnemyDexterityModifierCenter = new Label();
             labelEnemyConstitutionCenter = new Label();
-            enemyIntelligenceModifierCenter = new Label();
+            txtEnemyIntelligenceModifierCenter = new Label();
             labelEnemyIntelligenceCenter = new Label();
-            enemyConstitutionModifierCenter = new Label();
+            txtEnemyConstitutionModifierCenter = new Label();
             labelEnemyDexterityCenter = new Label();
-            enemyWisdomModifierCenter = new Label();
+            txtEnemyWisdomModifierCenter = new Label();
             labelEnemyStrengthCenter = new Label();
-            enemyCharismaModifierCenter = new Label();
+            txtEnemyCharismaModifierCenter = new Label();
             labelEnemyCharismaCenter = new Label();
-            enemyStrengthModifierCenter = new Label();
+            txtEnemyStrengthModifierCenter = new Label();
             labelEnemyWisdomCenter = new Label();
-            displayEnemyDexterityCenter = new Label();
-            displayEnemyStrengthCenter = new Label();
-            displayEnemyConstitutionCenter = new Label();
-            displayEnemyCharismaCenter = new Label();
-            displayEnemyHealthCenter = new Label();
-            displayEnemyIntelligenceCenter = new Label();
-            displayEnemyNameCenter = new Label();
-            displayEnemyWisdomCenter = new Label();
+            txtEnemyDexterityCenter = new Label();
+            txtEnemyStrengthCenter = new Label();
+            txtEnemyConstitutionCenter = new Label();
+            txtEnemyCharismaCenter = new Label();
+            txtEnemyHealthCenter = new Label();
+            txtEnemyIntelligenceCenter = new Label();
+            txtEnemyNameCenter = new Label();
+            txtEnemyWisdomCenter = new Label();
             enemyDataRight = new GroupBox();
             groupBox3 = new GroupBox();
-            displayEnemyTypeRight = new Label();
+            txtEnemyTypeRight = new Label();
             labelEnemyNameRight = new Label();
             labelEnemyTypeRight = new Label();
             labelEnemyHealthRight = new Label();
-            enemyDexterityModifierRight = new Label();
+            txtEnemyDexterityModifierRight = new Label();
             labelEnemyConstitutionRight = new Label();
-            enemyIntelligenceModifierRight = new Label();
+            txtEnemyIntelligenceModifierRight = new Label();
             labelEnemyIntelligenceRight = new Label();
-            enemyConstitutionModifierRight = new Label();
+            txtEnemyConstitutionModifierRight = new Label();
             labelEnemyDexterityRight = new Label();
-            enemyWisdomModifierRight = new Label();
+            txtEnemyWisdomModifierRight = new Label();
             labelEnemyStrengthRight = new Label();
-            enemyCharismaModifierRight = new Label();
+            txtEnemyCharismaModifierRight = new Label();
             labelEnemyCharismaRight = new Label();
-            enemyStrengthModifierRight = new Label();
+            txtEnemyStrengthModifierRight = new Label();
             labelEnemyWisdomRight = new Label();
-            displayEnemyDexterityRight = new Label();
-            displayEnemyStrengthRight = new Label();
-            displayEnemyConstitutionRight = new Label();
-            displayEnemyCharismaRight = new Label();
-            displayEnemyHealthRight = new Label();
-            displayEnemyIntelligenceRight = new Label();
-            displayEnemyNameRight = new Label();
-            displayEnemyWisdomRight = new Label();
+            txtEnemyDexterityRight = new Label();
+            txtEnemyStrengthRight = new Label();
+            txtEnemyConstitutionRight = new Label();
+            txtEnemyCharismaRight = new Label();
+            txtEnemyHealthRight = new Label();
+            txtEnemyIntelligenceRight = new Label();
+            txtEnemyNameRight = new Label();
+            txtEnemyWisdomRight = new Label();
             groupBox1 = new GroupBox();
             groupBox5 = new GroupBox();
             groupBox6 = new GroupBox();
             RollStrength = new Button();
             RollDexterity = new Button();
             RollIntelligence = new Button();
-            RollConstitution = new Button();
             RollWisdom = new Button();
             RollCharisma = new Button();
-            button7 = new Button();
+            btnTargetRight = new Button();
+            btnTargetLeft = new Button();
+            btnTargetCenter = new Button();
             enemyDataLeft.SuspendLayout();
             enemyDataCenter.SuspendLayout();
             enemyDataRight.SuspendLayout();
@@ -201,30 +202,30 @@
             // 
             // enemyDataLeft
             // 
-            enemyDataLeft.Controls.Add(displayEnemyTypeLeft);
+            enemyDataLeft.Controls.Add(txtEnemyTypeLeft);
             enemyDataLeft.Controls.Add(labelEnemyNameLeft);
             enemyDataLeft.Controls.Add(labelEnemyTypeLeft);
             enemyDataLeft.Controls.Add(labelEnemyHealthLeft);
-            enemyDataLeft.Controls.Add(enemyDexterityModifierLeft);
+            enemyDataLeft.Controls.Add(txtEnemyDexterityModifierLeft);
             enemyDataLeft.Controls.Add(labelEnemyConstitutionLeft);
-            enemyDataLeft.Controls.Add(enemyIntelligenceModifierLeft);
+            enemyDataLeft.Controls.Add(txtEnemyIntelligenceModifierLeft);
             enemyDataLeft.Controls.Add(labelEnemyIntelligenceLeft);
-            enemyDataLeft.Controls.Add(enemyConstitutionModifierLeft);
+            enemyDataLeft.Controls.Add(txtEnemyConstitutionModifierLeft);
             enemyDataLeft.Controls.Add(labelEnemyDexterityLeft);
-            enemyDataLeft.Controls.Add(enemyWisdomModifierLeft);
+            enemyDataLeft.Controls.Add(txtEnemyWisdomModifierLeft);
             enemyDataLeft.Controls.Add(labelEnemyStrengthLeft);
-            enemyDataLeft.Controls.Add(enemyCharismaModifierLeft);
+            enemyDataLeft.Controls.Add(txtEnemyCharismaModifierLeft);
             enemyDataLeft.Controls.Add(labelEnemyCharismaLeft);
-            enemyDataLeft.Controls.Add(enemyStrengthModifierLeft);
+            enemyDataLeft.Controls.Add(txtEnemyStrengthModifierLeft);
             enemyDataLeft.Controls.Add(labelEnemyWisdomLeft);
-            enemyDataLeft.Controls.Add(displayEnemyDexterityLeft);
-            enemyDataLeft.Controls.Add(displayEnemyStrengthLeft);
-            enemyDataLeft.Controls.Add(displayEnemyConstitutionLeft);
-            enemyDataLeft.Controls.Add(displayEnemyCharismaLeft);
-            enemyDataLeft.Controls.Add(displayEnemyHealthLeft);
-            enemyDataLeft.Controls.Add(displayEnemyIntelligenceLeft);
-            enemyDataLeft.Controls.Add(displayEnemyNameLeft);
-            enemyDataLeft.Controls.Add(displayEnemyWisdomLeft);
+            enemyDataLeft.Controls.Add(txtEnemyDexterityLeft);
+            enemyDataLeft.Controls.Add(txtEnemyStrengthLeft);
+            enemyDataLeft.Controls.Add(txtEnemyConstitutionLeft);
+            enemyDataLeft.Controls.Add(txtEnemyCharismaLeft);
+            enemyDataLeft.Controls.Add(txtEnemyHealthLeft);
+            enemyDataLeft.Controls.Add(txtEnemyIntelligenceLeft);
+            enemyDataLeft.Controls.Add(txtEnemyNameLeft);
+            enemyDataLeft.Controls.Add(txtEnemyWisdomLeft);
             enemyDataLeft.Location = new Point(12, 255);
             enemyDataLeft.Name = "enemyDataLeft";
             enemyDataLeft.Size = new Size(350, 265);
@@ -232,14 +233,14 @@
             enemyDataLeft.TabStop = false;
             enemyDataLeft.Text = "EnemyDataLeft";
             // 
-            // displayEnemyTypeLeft
+            // txtEnemyTypeLeft
             // 
-            displayEnemyTypeLeft.AutoSize = true;
-            displayEnemyTypeLeft.Location = new Point(173, 90);
-            displayEnemyTypeLeft.Name = "displayEnemyTypeLeft";
-            displayEnemyTypeLeft.Size = new Size(102, 25);
-            displayEnemyTypeLeft.TabIndex = 24;
-            displayEnemyTypeLeft.Text = "enemyType";
+            txtEnemyTypeLeft.AutoSize = true;
+            txtEnemyTypeLeft.Location = new Point(173, 90);
+            txtEnemyTypeLeft.Name = "txtEnemyTypeLeft";
+            txtEnemyTypeLeft.Size = new Size(102, 25);
+            txtEnemyTypeLeft.TabIndex = 24;
+            txtEnemyTypeLeft.Text = "enemyType";
             // 
             // labelEnemyTypeLeft
             // 
@@ -250,166 +251,166 @@
             labelEnemyTypeLeft.TabIndex = 23;
             labelEnemyTypeLeft.Text = "Type: ";
             // 
-            // enemyDexterityModifierLeft
+            // txtEnemyDexterityModifierLeft
             // 
-            enemyDexterityModifierLeft.AutoSize = true;
-            enemyDexterityModifierLeft.Location = new Point(279, 140);
-            enemyDexterityModifierLeft.Name = "enemyDexterityModifierLeft";
-            enemyDexterityModifierLeft.Size = new Size(44, 25);
-            enemyDexterityModifierLeft.TabIndex = 22;
-            enemyDexterityModifierLeft.Text = "+99";
+            txtEnemyDexterityModifierLeft.AutoSize = true;
+            txtEnemyDexterityModifierLeft.Location = new Point(279, 140);
+            txtEnemyDexterityModifierLeft.Name = "txtEnemyDexterityModifierLeft";
+            txtEnemyDexterityModifierLeft.Size = new Size(40, 25);
+            txtEnemyDexterityModifierLeft.TabIndex = 22;
+            txtEnemyDexterityModifierLeft.Text = "+??";
             // 
-            // enemyIntelligenceModifierLeft
+            // txtEnemyIntelligenceModifierLeft
             // 
-            enemyIntelligenceModifierLeft.AutoSize = true;
-            enemyIntelligenceModifierLeft.Location = new Point(279, 165);
-            enemyIntelligenceModifierLeft.Name = "enemyIntelligenceModifierLeft";
-            enemyIntelligenceModifierLeft.Size = new Size(44, 25);
-            enemyIntelligenceModifierLeft.TabIndex = 21;
-            enemyIntelligenceModifierLeft.Text = "+99";
+            txtEnemyIntelligenceModifierLeft.AutoSize = true;
+            txtEnemyIntelligenceModifierLeft.Location = new Point(279, 165);
+            txtEnemyIntelligenceModifierLeft.Name = "txtEnemyIntelligenceModifierLeft";
+            txtEnemyIntelligenceModifierLeft.Size = new Size(40, 25);
+            txtEnemyIntelligenceModifierLeft.TabIndex = 21;
+            txtEnemyIntelligenceModifierLeft.Text = "+??";
             // 
-            // enemyConstitutionModifierLeft
+            // txtEnemyConstitutionModifierLeft
             // 
-            enemyConstitutionModifierLeft.AutoSize = true;
-            enemyConstitutionModifierLeft.Location = new Point(279, 190);
-            enemyConstitutionModifierLeft.Name = "enemyConstitutionModifierLeft";
-            enemyConstitutionModifierLeft.Size = new Size(44, 25);
-            enemyConstitutionModifierLeft.TabIndex = 20;
-            enemyConstitutionModifierLeft.Text = "+99";
+            txtEnemyConstitutionModifierLeft.AutoSize = true;
+            txtEnemyConstitutionModifierLeft.Location = new Point(279, 190);
+            txtEnemyConstitutionModifierLeft.Name = "txtEnemyConstitutionModifierLeft";
+            txtEnemyConstitutionModifierLeft.Size = new Size(40, 25);
+            txtEnemyConstitutionModifierLeft.TabIndex = 20;
+            txtEnemyConstitutionModifierLeft.Text = "+??";
             // 
-            // enemyWisdomModifierLeft
+            // txtEnemyWisdomModifierLeft
             // 
-            enemyWisdomModifierLeft.AutoSize = true;
-            enemyWisdomModifierLeft.Location = new Point(279, 215);
-            enemyWisdomModifierLeft.Name = "enemyWisdomModifierLeft";
-            enemyWisdomModifierLeft.Size = new Size(44, 25);
-            enemyWisdomModifierLeft.TabIndex = 19;
-            enemyWisdomModifierLeft.Text = "+99";
+            txtEnemyWisdomModifierLeft.AutoSize = true;
+            txtEnemyWisdomModifierLeft.Location = new Point(279, 215);
+            txtEnemyWisdomModifierLeft.Name = "txtEnemyWisdomModifierLeft";
+            txtEnemyWisdomModifierLeft.Size = new Size(40, 25);
+            txtEnemyWisdomModifierLeft.TabIndex = 19;
+            txtEnemyWisdomModifierLeft.Text = "+??";
             // 
-            // enemyCharismaModifierLeft
+            // txtEnemyCharismaModifierLeft
             // 
-            enemyCharismaModifierLeft.AutoSize = true;
-            enemyCharismaModifierLeft.Location = new Point(279, 240);
-            enemyCharismaModifierLeft.Name = "enemyCharismaModifierLeft";
-            enemyCharismaModifierLeft.Size = new Size(44, 25);
-            enemyCharismaModifierLeft.TabIndex = 18;
-            enemyCharismaModifierLeft.Text = "+99";
+            txtEnemyCharismaModifierLeft.AutoSize = true;
+            txtEnemyCharismaModifierLeft.Location = new Point(279, 240);
+            txtEnemyCharismaModifierLeft.Name = "txtEnemyCharismaModifierLeft";
+            txtEnemyCharismaModifierLeft.Size = new Size(40, 25);
+            txtEnemyCharismaModifierLeft.TabIndex = 18;
+            txtEnemyCharismaModifierLeft.Text = "+??";
             // 
-            // enemyStrengthModifierLeft
+            // txtEnemyStrengthModifierLeft
             // 
-            enemyStrengthModifierLeft.AutoSize = true;
-            enemyStrengthModifierLeft.Location = new Point(279, 115);
-            enemyStrengthModifierLeft.Name = "enemyStrengthModifierLeft";
-            enemyStrengthModifierLeft.Size = new Size(44, 25);
-            enemyStrengthModifierLeft.TabIndex = 17;
-            enemyStrengthModifierLeft.Text = "+99";
+            txtEnemyStrengthModifierLeft.AutoSize = true;
+            txtEnemyStrengthModifierLeft.Location = new Point(279, 115);
+            txtEnemyStrengthModifierLeft.Name = "txtEnemyStrengthModifierLeft";
+            txtEnemyStrengthModifierLeft.Size = new Size(40, 25);
+            txtEnemyStrengthModifierLeft.TabIndex = 17;
+            txtEnemyStrengthModifierLeft.Text = "+??";
             // 
-            // displayEnemyDexterityLeft
+            // txtEnemyDexterityLeft
             // 
-            displayEnemyDexterityLeft.AutoSize = true;
-            displayEnemyDexterityLeft.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyDexterityLeft.Location = new Point(173, 140);
-            displayEnemyDexterityLeft.Name = "displayEnemyDexterityLeft";
-            displayEnemyDexterityLeft.Size = new Size(42, 25);
-            displayEnemyDexterityLeft.TabIndex = 16;
-            displayEnemyDexterityLeft.Text = "999";
+            txtEnemyDexterityLeft.AutoSize = true;
+            txtEnemyDexterityLeft.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyDexterityLeft.Location = new Point(173, 140);
+            txtEnemyDexterityLeft.Name = "txtEnemyDexterityLeft";
+            txtEnemyDexterityLeft.Size = new Size(36, 25);
+            txtEnemyDexterityLeft.TabIndex = 16;
+            txtEnemyDexterityLeft.Text = "???";
             // 
-            // displayEnemyStrengthLeft
+            // txtEnemyStrengthLeft
             // 
-            displayEnemyStrengthLeft.AutoSize = true;
-            displayEnemyStrengthLeft.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyStrengthLeft.Location = new Point(173, 115);
-            displayEnemyStrengthLeft.Name = "displayEnemyStrengthLeft";
-            displayEnemyStrengthLeft.Size = new Size(42, 25);
-            displayEnemyStrengthLeft.TabIndex = 9;
-            displayEnemyStrengthLeft.Text = "999";
+            txtEnemyStrengthLeft.AutoSize = true;
+            txtEnemyStrengthLeft.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyStrengthLeft.Location = new Point(173, 115);
+            txtEnemyStrengthLeft.Name = "txtEnemyStrengthLeft";
+            txtEnemyStrengthLeft.Size = new Size(36, 25);
+            txtEnemyStrengthLeft.TabIndex = 9;
+            txtEnemyStrengthLeft.Text = "???";
             // 
-            // displayEnemyConstitutionLeft
+            // txtEnemyConstitutionLeft
             // 
-            displayEnemyConstitutionLeft.AutoSize = true;
-            displayEnemyConstitutionLeft.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyConstitutionLeft.Location = new Point(173, 190);
-            displayEnemyConstitutionLeft.Name = "displayEnemyConstitutionLeft";
-            displayEnemyConstitutionLeft.Size = new Size(42, 25);
-            displayEnemyConstitutionLeft.TabIndex = 15;
-            displayEnemyConstitutionLeft.Text = "999";
+            txtEnemyConstitutionLeft.AutoSize = true;
+            txtEnemyConstitutionLeft.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyConstitutionLeft.Location = new Point(173, 190);
+            txtEnemyConstitutionLeft.Name = "txtEnemyConstitutionLeft";
+            txtEnemyConstitutionLeft.Size = new Size(36, 25);
+            txtEnemyConstitutionLeft.TabIndex = 15;
+            txtEnemyConstitutionLeft.Text = "???";
             // 
-            // displayEnemyCharismaLeft
+            // txtEnemyCharismaLeft
             // 
-            displayEnemyCharismaLeft.AutoSize = true;
-            displayEnemyCharismaLeft.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyCharismaLeft.Location = new Point(173, 240);
-            displayEnemyCharismaLeft.Name = "displayEnemyCharismaLeft";
-            displayEnemyCharismaLeft.Size = new Size(42, 25);
-            displayEnemyCharismaLeft.TabIndex = 10;
-            displayEnemyCharismaLeft.Text = "999";
+            txtEnemyCharismaLeft.AutoSize = true;
+            txtEnemyCharismaLeft.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyCharismaLeft.Location = new Point(173, 240);
+            txtEnemyCharismaLeft.Name = "txtEnemyCharismaLeft";
+            txtEnemyCharismaLeft.Size = new Size(36, 25);
+            txtEnemyCharismaLeft.TabIndex = 10;
+            txtEnemyCharismaLeft.Text = "???";
             // 
-            // displayEnemyHealthLeft
+            // txtEnemyHealthLeft
             // 
-            displayEnemyHealthLeft.AutoSize = true;
-            displayEnemyHealthLeft.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyHealthLeft.Location = new Point(173, 65);
-            displayEnemyHealthLeft.Name = "displayEnemyHealthLeft";
-            displayEnemyHealthLeft.Size = new Size(42, 25);
-            displayEnemyHealthLeft.TabIndex = 14;
-            displayEnemyHealthLeft.Text = "999";
+            txtEnemyHealthLeft.AutoSize = true;
+            txtEnemyHealthLeft.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyHealthLeft.Location = new Point(173, 65);
+            txtEnemyHealthLeft.Name = "txtEnemyHealthLeft";
+            txtEnemyHealthLeft.Size = new Size(42, 25);
+            txtEnemyHealthLeft.TabIndex = 14;
+            txtEnemyHealthLeft.Text = "999";
             // 
-            // displayEnemyIntelligenceLeft
+            // txtEnemyIntelligenceLeft
             // 
-            displayEnemyIntelligenceLeft.AutoSize = true;
-            displayEnemyIntelligenceLeft.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyIntelligenceLeft.Location = new Point(173, 165);
-            displayEnemyIntelligenceLeft.Name = "displayEnemyIntelligenceLeft";
-            displayEnemyIntelligenceLeft.Size = new Size(42, 25);
-            displayEnemyIntelligenceLeft.TabIndex = 11;
-            displayEnemyIntelligenceLeft.Text = "999";
+            txtEnemyIntelligenceLeft.AutoSize = true;
+            txtEnemyIntelligenceLeft.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyIntelligenceLeft.Location = new Point(173, 165);
+            txtEnemyIntelligenceLeft.Name = "txtEnemyIntelligenceLeft";
+            txtEnemyIntelligenceLeft.Size = new Size(36, 25);
+            txtEnemyIntelligenceLeft.TabIndex = 11;
+            txtEnemyIntelligenceLeft.Text = "???";
             // 
-            // displayEnemyNameLeft
+            // txtEnemyNameLeft
             // 
-            displayEnemyNameLeft.AutoSize = true;
-            displayEnemyNameLeft.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyNameLeft.Location = new Point(173, 40);
-            displayEnemyNameLeft.Name = "displayEnemyNameLeft";
-            displayEnemyNameLeft.Size = new Size(139, 25);
-            displayEnemyNameLeft.TabIndex = 13;
-            displayEnemyNameLeft.Text = "name goes here";
+            txtEnemyNameLeft.AutoSize = true;
+            txtEnemyNameLeft.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyNameLeft.Location = new Point(173, 40);
+            txtEnemyNameLeft.Name = "txtEnemyNameLeft";
+            txtEnemyNameLeft.Size = new Size(139, 25);
+            txtEnemyNameLeft.TabIndex = 13;
+            txtEnemyNameLeft.Text = "name goes here";
             // 
-            // displayEnemyWisdomLeft
+            // txtEnemyWisdomLeft
             // 
-            displayEnemyWisdomLeft.AutoSize = true;
-            displayEnemyWisdomLeft.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyWisdomLeft.Location = new Point(173, 215);
-            displayEnemyWisdomLeft.Name = "displayEnemyWisdomLeft";
-            displayEnemyWisdomLeft.Size = new Size(42, 25);
-            displayEnemyWisdomLeft.TabIndex = 12;
-            displayEnemyWisdomLeft.Text = "999";
+            txtEnemyWisdomLeft.AutoSize = true;
+            txtEnemyWisdomLeft.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyWisdomLeft.Location = new Point(173, 215);
+            txtEnemyWisdomLeft.Name = "txtEnemyWisdomLeft";
+            txtEnemyWisdomLeft.Size = new Size(36, 25);
+            txtEnemyWisdomLeft.TabIndex = 12;
+            txtEnemyWisdomLeft.Text = "???";
             // 
             // enemyDataCenter
             // 
-            enemyDataCenter.Controls.Add(displayEnemyTypeCenter);
+            enemyDataCenter.Controls.Add(txtEnemyTypeCenter);
             enemyDataCenter.Controls.Add(labelEnemyNameCenter);
             enemyDataCenter.Controls.Add(labelEnemyTypeCenter);
             enemyDataCenter.Controls.Add(labelEnemyHealthCenter);
-            enemyDataCenter.Controls.Add(enemyDexterityModifierCenter);
+            enemyDataCenter.Controls.Add(txtEnemyDexterityModifierCenter);
             enemyDataCenter.Controls.Add(labelEnemyConstitutionCenter);
-            enemyDataCenter.Controls.Add(enemyIntelligenceModifierCenter);
+            enemyDataCenter.Controls.Add(txtEnemyIntelligenceModifierCenter);
             enemyDataCenter.Controls.Add(labelEnemyIntelligenceCenter);
-            enemyDataCenter.Controls.Add(enemyConstitutionModifierCenter);
+            enemyDataCenter.Controls.Add(txtEnemyConstitutionModifierCenter);
             enemyDataCenter.Controls.Add(labelEnemyDexterityCenter);
-            enemyDataCenter.Controls.Add(enemyWisdomModifierCenter);
+            enemyDataCenter.Controls.Add(txtEnemyWisdomModifierCenter);
             enemyDataCenter.Controls.Add(labelEnemyStrengthCenter);
-            enemyDataCenter.Controls.Add(enemyCharismaModifierCenter);
+            enemyDataCenter.Controls.Add(txtEnemyCharismaModifierCenter);
             enemyDataCenter.Controls.Add(labelEnemyCharismaCenter);
-            enemyDataCenter.Controls.Add(enemyStrengthModifierCenter);
+            enemyDataCenter.Controls.Add(txtEnemyStrengthModifierCenter);
             enemyDataCenter.Controls.Add(labelEnemyWisdomCenter);
-            enemyDataCenter.Controls.Add(displayEnemyDexterityCenter);
-            enemyDataCenter.Controls.Add(displayEnemyStrengthCenter);
-            enemyDataCenter.Controls.Add(displayEnemyConstitutionCenter);
-            enemyDataCenter.Controls.Add(displayEnemyCharismaCenter);
-            enemyDataCenter.Controls.Add(displayEnemyHealthCenter);
-            enemyDataCenter.Controls.Add(displayEnemyIntelligenceCenter);
-            enemyDataCenter.Controls.Add(displayEnemyNameCenter);
-            enemyDataCenter.Controls.Add(displayEnemyWisdomCenter);
+            enemyDataCenter.Controls.Add(txtEnemyDexterityCenter);
+            enemyDataCenter.Controls.Add(txtEnemyStrengthCenter);
+            enemyDataCenter.Controls.Add(txtEnemyConstitutionCenter);
+            enemyDataCenter.Controls.Add(txtEnemyCharismaCenter);
+            enemyDataCenter.Controls.Add(txtEnemyHealthCenter);
+            enemyDataCenter.Controls.Add(txtEnemyIntelligenceCenter);
+            enemyDataCenter.Controls.Add(txtEnemyNameCenter);
+            enemyDataCenter.Controls.Add(txtEnemyWisdomCenter);
             enemyDataCenter.Location = new Point(611, 255);
             enemyDataCenter.Name = "enemyDataCenter";
             enemyDataCenter.Size = new Size(350, 265);
@@ -417,14 +418,14 @@
             enemyDataCenter.TabStop = false;
             enemyDataCenter.Text = "EnemyDataCenter";
             // 
-            // displayEnemyTypeCenter
+            // txtEnemyTypeCenter
             // 
-            displayEnemyTypeCenter.AutoSize = true;
-            displayEnemyTypeCenter.Location = new Point(173, 90);
-            displayEnemyTypeCenter.Name = "displayEnemyTypeCenter";
-            displayEnemyTypeCenter.Size = new Size(102, 25);
-            displayEnemyTypeCenter.TabIndex = 24;
-            displayEnemyTypeCenter.Text = "enemyType";
+            txtEnemyTypeCenter.AutoSize = true;
+            txtEnemyTypeCenter.Location = new Point(173, 90);
+            txtEnemyTypeCenter.Name = "txtEnemyTypeCenter";
+            txtEnemyTypeCenter.Size = new Size(102, 25);
+            txtEnemyTypeCenter.TabIndex = 24;
+            txtEnemyTypeCenter.Text = "enemyType";
             // 
             // labelEnemyNameCenter
             // 
@@ -455,14 +456,14 @@
             labelEnemyHealthCenter.TabIndex = 1;
             labelEnemyHealthCenter.Text = "Health: ";
             // 
-            // enemyDexterityModifierCenter
+            // txtEnemyDexterityModifierCenter
             // 
-            enemyDexterityModifierCenter.AutoSize = true;
-            enemyDexterityModifierCenter.Location = new Point(279, 140);
-            enemyDexterityModifierCenter.Name = "enemyDexterityModifierCenter";
-            enemyDexterityModifierCenter.Size = new Size(44, 25);
-            enemyDexterityModifierCenter.TabIndex = 22;
-            enemyDexterityModifierCenter.Text = "+99";
+            txtEnemyDexterityModifierCenter.AutoSize = true;
+            txtEnemyDexterityModifierCenter.Location = new Point(279, 140);
+            txtEnemyDexterityModifierCenter.Name = "txtEnemyDexterityModifierCenter";
+            txtEnemyDexterityModifierCenter.Size = new Size(40, 25);
+            txtEnemyDexterityModifierCenter.TabIndex = 22;
+            txtEnemyDexterityModifierCenter.Text = "+??";
             // 
             // labelEnemyConstitutionCenter
             // 
@@ -474,14 +475,14 @@
             labelEnemyConstitutionCenter.TabIndex = 2;
             labelEnemyConstitutionCenter.Text = "Constitution: ";
             // 
-            // enemyIntelligenceModifierCenter
+            // txtEnemyIntelligenceModifierCenter
             // 
-            enemyIntelligenceModifierCenter.AutoSize = true;
-            enemyIntelligenceModifierCenter.Location = new Point(279, 165);
-            enemyIntelligenceModifierCenter.Name = "enemyIntelligenceModifierCenter";
-            enemyIntelligenceModifierCenter.Size = new Size(44, 25);
-            enemyIntelligenceModifierCenter.TabIndex = 21;
-            enemyIntelligenceModifierCenter.Text = "+99";
+            txtEnemyIntelligenceModifierCenter.AutoSize = true;
+            txtEnemyIntelligenceModifierCenter.Location = new Point(279, 165);
+            txtEnemyIntelligenceModifierCenter.Name = "txtEnemyIntelligenceModifierCenter";
+            txtEnemyIntelligenceModifierCenter.Size = new Size(40, 25);
+            txtEnemyIntelligenceModifierCenter.TabIndex = 21;
+            txtEnemyIntelligenceModifierCenter.Text = "+??";
             // 
             // labelEnemyIntelligenceCenter
             // 
@@ -493,14 +494,14 @@
             labelEnemyIntelligenceCenter.TabIndex = 3;
             labelEnemyIntelligenceCenter.Text = "Intelligence: ";
             // 
-            // enemyConstitutionModifierCenter
+            // txtEnemyConstitutionModifierCenter
             // 
-            enemyConstitutionModifierCenter.AutoSize = true;
-            enemyConstitutionModifierCenter.Location = new Point(279, 190);
-            enemyConstitutionModifierCenter.Name = "enemyConstitutionModifierCenter";
-            enemyConstitutionModifierCenter.Size = new Size(44, 25);
-            enemyConstitutionModifierCenter.TabIndex = 20;
-            enemyConstitutionModifierCenter.Text = "+99";
+            txtEnemyConstitutionModifierCenter.AutoSize = true;
+            txtEnemyConstitutionModifierCenter.Location = new Point(279, 190);
+            txtEnemyConstitutionModifierCenter.Name = "txtEnemyConstitutionModifierCenter";
+            txtEnemyConstitutionModifierCenter.Size = new Size(40, 25);
+            txtEnemyConstitutionModifierCenter.TabIndex = 20;
+            txtEnemyConstitutionModifierCenter.Text = "+??";
             // 
             // labelEnemyDexterityCenter
             // 
@@ -512,14 +513,14 @@
             labelEnemyDexterityCenter.TabIndex = 4;
             labelEnemyDexterityCenter.Text = "Dexterity: ";
             // 
-            // enemyWisdomModifierCenter
+            // txtEnemyWisdomModifierCenter
             // 
-            enemyWisdomModifierCenter.AutoSize = true;
-            enemyWisdomModifierCenter.Location = new Point(279, 215);
-            enemyWisdomModifierCenter.Name = "enemyWisdomModifierCenter";
-            enemyWisdomModifierCenter.Size = new Size(44, 25);
-            enemyWisdomModifierCenter.TabIndex = 19;
-            enemyWisdomModifierCenter.Text = "+99";
+            txtEnemyWisdomModifierCenter.AutoSize = true;
+            txtEnemyWisdomModifierCenter.Location = new Point(279, 215);
+            txtEnemyWisdomModifierCenter.Name = "txtEnemyWisdomModifierCenter";
+            txtEnemyWisdomModifierCenter.Size = new Size(40, 25);
+            txtEnemyWisdomModifierCenter.TabIndex = 19;
+            txtEnemyWisdomModifierCenter.Text = "+??";
             // 
             // labelEnemyStrengthCenter
             // 
@@ -531,14 +532,14 @@
             labelEnemyStrengthCenter.TabIndex = 5;
             labelEnemyStrengthCenter.Text = "Strength: ";
             // 
-            // enemyCharismaModifierCenter
+            // txtEnemyCharismaModifierCenter
             // 
-            enemyCharismaModifierCenter.AutoSize = true;
-            enemyCharismaModifierCenter.Location = new Point(279, 240);
-            enemyCharismaModifierCenter.Name = "enemyCharismaModifierCenter";
-            enemyCharismaModifierCenter.Size = new Size(44, 25);
-            enemyCharismaModifierCenter.TabIndex = 18;
-            enemyCharismaModifierCenter.Text = "+99";
+            txtEnemyCharismaModifierCenter.AutoSize = true;
+            txtEnemyCharismaModifierCenter.Location = new Point(279, 240);
+            txtEnemyCharismaModifierCenter.Name = "txtEnemyCharismaModifierCenter";
+            txtEnemyCharismaModifierCenter.Size = new Size(40, 25);
+            txtEnemyCharismaModifierCenter.TabIndex = 18;
+            txtEnemyCharismaModifierCenter.Text = "+??";
             // 
             // labelEnemyCharismaCenter
             // 
@@ -550,14 +551,14 @@
             labelEnemyCharismaCenter.TabIndex = 6;
             labelEnemyCharismaCenter.Text = "Charisma: ";
             // 
-            // enemyStrengthModifierCenter
+            // txtEnemyStrengthModifierCenter
             // 
-            enemyStrengthModifierCenter.AutoSize = true;
-            enemyStrengthModifierCenter.Location = new Point(279, 115);
-            enemyStrengthModifierCenter.Name = "enemyStrengthModifierCenter";
-            enemyStrengthModifierCenter.Size = new Size(44, 25);
-            enemyStrengthModifierCenter.TabIndex = 17;
-            enemyStrengthModifierCenter.Text = "+99";
+            txtEnemyStrengthModifierCenter.AutoSize = true;
+            txtEnemyStrengthModifierCenter.Location = new Point(279, 115);
+            txtEnemyStrengthModifierCenter.Name = "txtEnemyStrengthModifierCenter";
+            txtEnemyStrengthModifierCenter.Size = new Size(40, 25);
+            txtEnemyStrengthModifierCenter.TabIndex = 17;
+            txtEnemyStrengthModifierCenter.Text = "+??";
             // 
             // labelEnemyWisdomCenter
             // 
@@ -569,113 +570,113 @@
             labelEnemyWisdomCenter.TabIndex = 7;
             labelEnemyWisdomCenter.Text = "Wisdom: ";
             // 
-            // displayEnemyDexterityCenter
+            // txtEnemyDexterityCenter
             // 
-            displayEnemyDexterityCenter.AutoSize = true;
-            displayEnemyDexterityCenter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyDexterityCenter.Location = new Point(173, 140);
-            displayEnemyDexterityCenter.Name = "displayEnemyDexterityCenter";
-            displayEnemyDexterityCenter.Size = new Size(42, 25);
-            displayEnemyDexterityCenter.TabIndex = 16;
-            displayEnemyDexterityCenter.Text = "999";
+            txtEnemyDexterityCenter.AutoSize = true;
+            txtEnemyDexterityCenter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyDexterityCenter.Location = new Point(173, 140);
+            txtEnemyDexterityCenter.Name = "txtEnemyDexterityCenter";
+            txtEnemyDexterityCenter.Size = new Size(36, 25);
+            txtEnemyDexterityCenter.TabIndex = 16;
+            txtEnemyDexterityCenter.Text = "???";
             // 
-            // displayEnemyStrengthCenter
+            // txtEnemyStrengthCenter
             // 
-            displayEnemyStrengthCenter.AutoSize = true;
-            displayEnemyStrengthCenter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyStrengthCenter.Location = new Point(173, 115);
-            displayEnemyStrengthCenter.Name = "displayEnemyStrengthCenter";
-            displayEnemyStrengthCenter.Size = new Size(42, 25);
-            displayEnemyStrengthCenter.TabIndex = 9;
-            displayEnemyStrengthCenter.Text = "999";
+            txtEnemyStrengthCenter.AutoSize = true;
+            txtEnemyStrengthCenter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyStrengthCenter.Location = new Point(173, 115);
+            txtEnemyStrengthCenter.Name = "txtEnemyStrengthCenter";
+            txtEnemyStrengthCenter.Size = new Size(36, 25);
+            txtEnemyStrengthCenter.TabIndex = 9;
+            txtEnemyStrengthCenter.Text = "???";
             // 
-            // displayEnemyConstitutionCenter
+            // txtEnemyConstitutionCenter
             // 
-            displayEnemyConstitutionCenter.AutoSize = true;
-            displayEnemyConstitutionCenter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyConstitutionCenter.Location = new Point(173, 190);
-            displayEnemyConstitutionCenter.Name = "displayEnemyConstitutionCenter";
-            displayEnemyConstitutionCenter.Size = new Size(42, 25);
-            displayEnemyConstitutionCenter.TabIndex = 15;
-            displayEnemyConstitutionCenter.Text = "999";
+            txtEnemyConstitutionCenter.AutoSize = true;
+            txtEnemyConstitutionCenter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyConstitutionCenter.Location = new Point(173, 190);
+            txtEnemyConstitutionCenter.Name = "txtEnemyConstitutionCenter";
+            txtEnemyConstitutionCenter.Size = new Size(36, 25);
+            txtEnemyConstitutionCenter.TabIndex = 15;
+            txtEnemyConstitutionCenter.Text = "???";
             // 
-            // displayEnemyCharismaCenter
+            // txtEnemyCharismaCenter
             // 
-            displayEnemyCharismaCenter.AutoSize = true;
-            displayEnemyCharismaCenter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyCharismaCenter.Location = new Point(173, 240);
-            displayEnemyCharismaCenter.Name = "displayEnemyCharismaCenter";
-            displayEnemyCharismaCenter.Size = new Size(42, 25);
-            displayEnemyCharismaCenter.TabIndex = 10;
-            displayEnemyCharismaCenter.Text = "999";
+            txtEnemyCharismaCenter.AutoSize = true;
+            txtEnemyCharismaCenter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyCharismaCenter.Location = new Point(173, 240);
+            txtEnemyCharismaCenter.Name = "txtEnemyCharismaCenter";
+            txtEnemyCharismaCenter.Size = new Size(36, 25);
+            txtEnemyCharismaCenter.TabIndex = 10;
+            txtEnemyCharismaCenter.Text = "???";
             // 
-            // displayEnemyHealthCenter
+            // txtEnemyHealthCenter
             // 
-            displayEnemyHealthCenter.AutoSize = true;
-            displayEnemyHealthCenter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyHealthCenter.Location = new Point(173, 65);
-            displayEnemyHealthCenter.Name = "displayEnemyHealthCenter";
-            displayEnemyHealthCenter.Size = new Size(42, 25);
-            displayEnemyHealthCenter.TabIndex = 14;
-            displayEnemyHealthCenter.Text = "999";
+            txtEnemyHealthCenter.AutoSize = true;
+            txtEnemyHealthCenter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyHealthCenter.Location = new Point(173, 65);
+            txtEnemyHealthCenter.Name = "txtEnemyHealthCenter";
+            txtEnemyHealthCenter.Size = new Size(42, 25);
+            txtEnemyHealthCenter.TabIndex = 14;
+            txtEnemyHealthCenter.Text = "999";
             // 
-            // displayEnemyIntelligenceCenter
+            // txtEnemyIntelligenceCenter
             // 
-            displayEnemyIntelligenceCenter.AutoSize = true;
-            displayEnemyIntelligenceCenter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyIntelligenceCenter.Location = new Point(173, 165);
-            displayEnemyIntelligenceCenter.Name = "displayEnemyIntelligenceCenter";
-            displayEnemyIntelligenceCenter.Size = new Size(42, 25);
-            displayEnemyIntelligenceCenter.TabIndex = 11;
-            displayEnemyIntelligenceCenter.Text = "999";
+            txtEnemyIntelligenceCenter.AutoSize = true;
+            txtEnemyIntelligenceCenter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyIntelligenceCenter.Location = new Point(173, 165);
+            txtEnemyIntelligenceCenter.Name = "txtEnemyIntelligenceCenter";
+            txtEnemyIntelligenceCenter.Size = new Size(36, 25);
+            txtEnemyIntelligenceCenter.TabIndex = 11;
+            txtEnemyIntelligenceCenter.Text = "???";
             // 
-            // displayEnemyNameCenter
+            // txtEnemyNameCenter
             // 
-            displayEnemyNameCenter.AutoSize = true;
-            displayEnemyNameCenter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyNameCenter.Location = new Point(173, 40);
-            displayEnemyNameCenter.Name = "displayEnemyNameCenter";
-            displayEnemyNameCenter.Size = new Size(139, 25);
-            displayEnemyNameCenter.TabIndex = 13;
-            displayEnemyNameCenter.Text = "name goes here";
+            txtEnemyNameCenter.AutoSize = true;
+            txtEnemyNameCenter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyNameCenter.Location = new Point(173, 40);
+            txtEnemyNameCenter.Name = "txtEnemyNameCenter";
+            txtEnemyNameCenter.Size = new Size(139, 25);
+            txtEnemyNameCenter.TabIndex = 13;
+            txtEnemyNameCenter.Text = "name goes here";
             // 
-            // displayEnemyWisdomCenter
+            // txtEnemyWisdomCenter
             // 
-            displayEnemyWisdomCenter.AutoSize = true;
-            displayEnemyWisdomCenter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyWisdomCenter.Location = new Point(173, 215);
-            displayEnemyWisdomCenter.Name = "displayEnemyWisdomCenter";
-            displayEnemyWisdomCenter.Size = new Size(42, 25);
-            displayEnemyWisdomCenter.TabIndex = 12;
-            displayEnemyWisdomCenter.Text = "999";
+            txtEnemyWisdomCenter.AutoSize = true;
+            txtEnemyWisdomCenter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyWisdomCenter.Location = new Point(173, 215);
+            txtEnemyWisdomCenter.Name = "txtEnemyWisdomCenter";
+            txtEnemyWisdomCenter.Size = new Size(36, 25);
+            txtEnemyWisdomCenter.TabIndex = 12;
+            txtEnemyWisdomCenter.Text = "???";
             // 
             // enemyDataRight
             // 
             enemyDataRight.Controls.Add(groupBox3);
-            enemyDataRight.Controls.Add(displayEnemyTypeRight);
+            enemyDataRight.Controls.Add(txtEnemyTypeRight);
             enemyDataRight.Controls.Add(labelEnemyNameRight);
             enemyDataRight.Controls.Add(labelEnemyTypeRight);
             enemyDataRight.Controls.Add(labelEnemyHealthRight);
-            enemyDataRight.Controls.Add(enemyDexterityModifierRight);
+            enemyDataRight.Controls.Add(txtEnemyDexterityModifierRight);
             enemyDataRight.Controls.Add(labelEnemyConstitutionRight);
-            enemyDataRight.Controls.Add(enemyIntelligenceModifierRight);
+            enemyDataRight.Controls.Add(txtEnemyIntelligenceModifierRight);
             enemyDataRight.Controls.Add(labelEnemyIntelligenceRight);
-            enemyDataRight.Controls.Add(enemyConstitutionModifierRight);
+            enemyDataRight.Controls.Add(txtEnemyConstitutionModifierRight);
             enemyDataRight.Controls.Add(labelEnemyDexterityRight);
-            enemyDataRight.Controls.Add(enemyWisdomModifierRight);
+            enemyDataRight.Controls.Add(txtEnemyWisdomModifierRight);
             enemyDataRight.Controls.Add(labelEnemyStrengthRight);
-            enemyDataRight.Controls.Add(enemyCharismaModifierRight);
+            enemyDataRight.Controls.Add(txtEnemyCharismaModifierRight);
             enemyDataRight.Controls.Add(labelEnemyCharismaRight);
-            enemyDataRight.Controls.Add(enemyStrengthModifierRight);
+            enemyDataRight.Controls.Add(txtEnemyStrengthModifierRight);
             enemyDataRight.Controls.Add(labelEnemyWisdomRight);
-            enemyDataRight.Controls.Add(displayEnemyDexterityRight);
-            enemyDataRight.Controls.Add(displayEnemyStrengthRight);
-            enemyDataRight.Controls.Add(displayEnemyConstitutionRight);
-            enemyDataRight.Controls.Add(displayEnemyCharismaRight);
-            enemyDataRight.Controls.Add(displayEnemyHealthRight);
-            enemyDataRight.Controls.Add(displayEnemyIntelligenceRight);
-            enemyDataRight.Controls.Add(displayEnemyNameRight);
-            enemyDataRight.Controls.Add(displayEnemyWisdomRight);
+            enemyDataRight.Controls.Add(txtEnemyDexterityRight);
+            enemyDataRight.Controls.Add(txtEnemyStrengthRight);
+            enemyDataRight.Controls.Add(txtEnemyConstitutionRight);
+            enemyDataRight.Controls.Add(txtEnemyCharismaRight);
+            enemyDataRight.Controls.Add(txtEnemyHealthRight);
+            enemyDataRight.Controls.Add(txtEnemyIntelligenceRight);
+            enemyDataRight.Controls.Add(txtEnemyNameRight);
+            enemyDataRight.Controls.Add(txtEnemyWisdomRight);
             enemyDataRight.Location = new Point(1199, 255);
             enemyDataRight.Name = "enemyDataRight";
             enemyDataRight.Size = new Size(350, 265);
@@ -692,14 +693,14 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "groupBox3";
             // 
-            // displayEnemyTypeRight
+            // txtEnemyTypeRight
             // 
-            displayEnemyTypeRight.AutoSize = true;
-            displayEnemyTypeRight.Location = new Point(173, 90);
-            displayEnemyTypeRight.Name = "displayEnemyTypeRight";
-            displayEnemyTypeRight.Size = new Size(102, 25);
-            displayEnemyTypeRight.TabIndex = 24;
-            displayEnemyTypeRight.Text = "enemyType";
+            txtEnemyTypeRight.AutoSize = true;
+            txtEnemyTypeRight.Location = new Point(173, 90);
+            txtEnemyTypeRight.Name = "txtEnemyTypeRight";
+            txtEnemyTypeRight.Size = new Size(102, 25);
+            txtEnemyTypeRight.TabIndex = 24;
+            txtEnemyTypeRight.Text = "enemyType";
             // 
             // labelEnemyNameRight
             // 
@@ -730,14 +731,14 @@
             labelEnemyHealthRight.TabIndex = 1;
             labelEnemyHealthRight.Text = "Health: ";
             // 
-            // enemyDexterityModifierRight
+            // txtEnemyDexterityModifierRight
             // 
-            enemyDexterityModifierRight.AutoSize = true;
-            enemyDexterityModifierRight.Location = new Point(279, 140);
-            enemyDexterityModifierRight.Name = "enemyDexterityModifierRight";
-            enemyDexterityModifierRight.Size = new Size(44, 25);
-            enemyDexterityModifierRight.TabIndex = 22;
-            enemyDexterityModifierRight.Text = "+99";
+            txtEnemyDexterityModifierRight.AutoSize = true;
+            txtEnemyDexterityModifierRight.Location = new Point(279, 140);
+            txtEnemyDexterityModifierRight.Name = "txtEnemyDexterityModifierRight";
+            txtEnemyDexterityModifierRight.Size = new Size(40, 25);
+            txtEnemyDexterityModifierRight.TabIndex = 22;
+            txtEnemyDexterityModifierRight.Text = "+??";
             // 
             // labelEnemyConstitutionRight
             // 
@@ -749,14 +750,14 @@
             labelEnemyConstitutionRight.TabIndex = 2;
             labelEnemyConstitutionRight.Text = "Constitution: ";
             // 
-            // enemyIntelligenceModifierRight
+            // txtEnemyIntelligenceModifierRight
             // 
-            enemyIntelligenceModifierRight.AutoSize = true;
-            enemyIntelligenceModifierRight.Location = new Point(279, 165);
-            enemyIntelligenceModifierRight.Name = "enemyIntelligenceModifierRight";
-            enemyIntelligenceModifierRight.Size = new Size(44, 25);
-            enemyIntelligenceModifierRight.TabIndex = 21;
-            enemyIntelligenceModifierRight.Text = "+99";
+            txtEnemyIntelligenceModifierRight.AutoSize = true;
+            txtEnemyIntelligenceModifierRight.Location = new Point(279, 165);
+            txtEnemyIntelligenceModifierRight.Name = "txtEnemyIntelligenceModifierRight";
+            txtEnemyIntelligenceModifierRight.Size = new Size(40, 25);
+            txtEnemyIntelligenceModifierRight.TabIndex = 21;
+            txtEnemyIntelligenceModifierRight.Text = "+??";
             // 
             // labelEnemyIntelligenceRight
             // 
@@ -768,14 +769,14 @@
             labelEnemyIntelligenceRight.TabIndex = 3;
             labelEnemyIntelligenceRight.Text = "Intelligence: ";
             // 
-            // enemyConstitutionModifierRight
+            // txtEnemyConstitutionModifierRight
             // 
-            enemyConstitutionModifierRight.AutoSize = true;
-            enemyConstitutionModifierRight.Location = new Point(279, 190);
-            enemyConstitutionModifierRight.Name = "enemyConstitutionModifierRight";
-            enemyConstitutionModifierRight.Size = new Size(44, 25);
-            enemyConstitutionModifierRight.TabIndex = 20;
-            enemyConstitutionModifierRight.Text = "+99";
+            txtEnemyConstitutionModifierRight.AutoSize = true;
+            txtEnemyConstitutionModifierRight.Location = new Point(279, 190);
+            txtEnemyConstitutionModifierRight.Name = "txtEnemyConstitutionModifierRight";
+            txtEnemyConstitutionModifierRight.Size = new Size(40, 25);
+            txtEnemyConstitutionModifierRight.TabIndex = 20;
+            txtEnemyConstitutionModifierRight.Text = "+??";
             // 
             // labelEnemyDexterityRight
             // 
@@ -787,14 +788,14 @@
             labelEnemyDexterityRight.TabIndex = 4;
             labelEnemyDexterityRight.Text = "Dexterity: ";
             // 
-            // enemyWisdomModifierRight
+            // txtEnemyWisdomModifierRight
             // 
-            enemyWisdomModifierRight.AutoSize = true;
-            enemyWisdomModifierRight.Location = new Point(279, 215);
-            enemyWisdomModifierRight.Name = "enemyWisdomModifierRight";
-            enemyWisdomModifierRight.Size = new Size(44, 25);
-            enemyWisdomModifierRight.TabIndex = 19;
-            enemyWisdomModifierRight.Text = "+99";
+            txtEnemyWisdomModifierRight.AutoSize = true;
+            txtEnemyWisdomModifierRight.Location = new Point(279, 215);
+            txtEnemyWisdomModifierRight.Name = "txtEnemyWisdomModifierRight";
+            txtEnemyWisdomModifierRight.Size = new Size(40, 25);
+            txtEnemyWisdomModifierRight.TabIndex = 19;
+            txtEnemyWisdomModifierRight.Text = "+??";
             // 
             // labelEnemyStrengthRight
             // 
@@ -806,14 +807,14 @@
             labelEnemyStrengthRight.TabIndex = 5;
             labelEnemyStrengthRight.Text = "Strength: ";
             // 
-            // enemyCharismaModifierRight
+            // txtEnemyCharismaModifierRight
             // 
-            enemyCharismaModifierRight.AutoSize = true;
-            enemyCharismaModifierRight.Location = new Point(279, 240);
-            enemyCharismaModifierRight.Name = "enemyCharismaModifierRight";
-            enemyCharismaModifierRight.Size = new Size(44, 25);
-            enemyCharismaModifierRight.TabIndex = 18;
-            enemyCharismaModifierRight.Text = "+99";
+            txtEnemyCharismaModifierRight.AutoSize = true;
+            txtEnemyCharismaModifierRight.Location = new Point(279, 240);
+            txtEnemyCharismaModifierRight.Name = "txtEnemyCharismaModifierRight";
+            txtEnemyCharismaModifierRight.Size = new Size(40, 25);
+            txtEnemyCharismaModifierRight.TabIndex = 18;
+            txtEnemyCharismaModifierRight.Text = "+??";
             // 
             // labelEnemyCharismaRight
             // 
@@ -825,14 +826,14 @@
             labelEnemyCharismaRight.TabIndex = 6;
             labelEnemyCharismaRight.Text = "Charisma: ";
             // 
-            // enemyStrengthModifierRight
+            // txtEnemyStrengthModifierRight
             // 
-            enemyStrengthModifierRight.AutoSize = true;
-            enemyStrengthModifierRight.Location = new Point(279, 115);
-            enemyStrengthModifierRight.Name = "enemyStrengthModifierRight";
-            enemyStrengthModifierRight.Size = new Size(44, 25);
-            enemyStrengthModifierRight.TabIndex = 17;
-            enemyStrengthModifierRight.Text = "+99";
+            txtEnemyStrengthModifierRight.AutoSize = true;
+            txtEnemyStrengthModifierRight.Location = new Point(279, 115);
+            txtEnemyStrengthModifierRight.Name = "txtEnemyStrengthModifierRight";
+            txtEnemyStrengthModifierRight.Size = new Size(40, 25);
+            txtEnemyStrengthModifierRight.TabIndex = 17;
+            txtEnemyStrengthModifierRight.Text = "+??";
             // 
             // labelEnemyWisdomRight
             // 
@@ -844,85 +845,85 @@
             labelEnemyWisdomRight.TabIndex = 7;
             labelEnemyWisdomRight.Text = "Wisdom: ";
             // 
-            // displayEnemyDexterityRight
+            // txtEnemyDexterityRight
             // 
-            displayEnemyDexterityRight.AutoSize = true;
-            displayEnemyDexterityRight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyDexterityRight.Location = new Point(173, 140);
-            displayEnemyDexterityRight.Name = "displayEnemyDexterityRight";
-            displayEnemyDexterityRight.Size = new Size(42, 25);
-            displayEnemyDexterityRight.TabIndex = 16;
-            displayEnemyDexterityRight.Text = "999";
+            txtEnemyDexterityRight.AutoSize = true;
+            txtEnemyDexterityRight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyDexterityRight.Location = new Point(173, 140);
+            txtEnemyDexterityRight.Name = "txtEnemyDexterityRight";
+            txtEnemyDexterityRight.Size = new Size(36, 25);
+            txtEnemyDexterityRight.TabIndex = 16;
+            txtEnemyDexterityRight.Text = "???";
             // 
-            // displayEnemyStrengthRight
+            // txtEnemyStrengthRight
             // 
-            displayEnemyStrengthRight.AutoSize = true;
-            displayEnemyStrengthRight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyStrengthRight.Location = new Point(173, 115);
-            displayEnemyStrengthRight.Name = "displayEnemyStrengthRight";
-            displayEnemyStrengthRight.Size = new Size(42, 25);
-            displayEnemyStrengthRight.TabIndex = 9;
-            displayEnemyStrengthRight.Text = "999";
+            txtEnemyStrengthRight.AutoSize = true;
+            txtEnemyStrengthRight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyStrengthRight.Location = new Point(173, 115);
+            txtEnemyStrengthRight.Name = "txtEnemyStrengthRight";
+            txtEnemyStrengthRight.Size = new Size(36, 25);
+            txtEnemyStrengthRight.TabIndex = 9;
+            txtEnemyStrengthRight.Text = "???";
             // 
-            // displayEnemyConstitutionRight
+            // txtEnemyConstitutionRight
             // 
-            displayEnemyConstitutionRight.AutoSize = true;
-            displayEnemyConstitutionRight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyConstitutionRight.Location = new Point(173, 190);
-            displayEnemyConstitutionRight.Name = "displayEnemyConstitutionRight";
-            displayEnemyConstitutionRight.Size = new Size(42, 25);
-            displayEnemyConstitutionRight.TabIndex = 15;
-            displayEnemyConstitutionRight.Text = "999";
+            txtEnemyConstitutionRight.AutoSize = true;
+            txtEnemyConstitutionRight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyConstitutionRight.Location = new Point(173, 190);
+            txtEnemyConstitutionRight.Name = "txtEnemyConstitutionRight";
+            txtEnemyConstitutionRight.Size = new Size(36, 25);
+            txtEnemyConstitutionRight.TabIndex = 15;
+            txtEnemyConstitutionRight.Text = "???";
             // 
-            // displayEnemyCharismaRight
+            // txtEnemyCharismaRight
             // 
-            displayEnemyCharismaRight.AutoSize = true;
-            displayEnemyCharismaRight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyCharismaRight.Location = new Point(173, 240);
-            displayEnemyCharismaRight.Name = "displayEnemyCharismaRight";
-            displayEnemyCharismaRight.Size = new Size(42, 25);
-            displayEnemyCharismaRight.TabIndex = 10;
-            displayEnemyCharismaRight.Text = "999";
+            txtEnemyCharismaRight.AutoSize = true;
+            txtEnemyCharismaRight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyCharismaRight.Location = new Point(173, 240);
+            txtEnemyCharismaRight.Name = "txtEnemyCharismaRight";
+            txtEnemyCharismaRight.Size = new Size(36, 25);
+            txtEnemyCharismaRight.TabIndex = 10;
+            txtEnemyCharismaRight.Text = "???";
             // 
-            // displayEnemyHealthRight
+            // txtEnemyHealthRight
             // 
-            displayEnemyHealthRight.AutoSize = true;
-            displayEnemyHealthRight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyHealthRight.Location = new Point(173, 65);
-            displayEnemyHealthRight.Name = "displayEnemyHealthRight";
-            displayEnemyHealthRight.Size = new Size(42, 25);
-            displayEnemyHealthRight.TabIndex = 14;
-            displayEnemyHealthRight.Text = "999";
+            txtEnemyHealthRight.AutoSize = true;
+            txtEnemyHealthRight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyHealthRight.Location = new Point(173, 65);
+            txtEnemyHealthRight.Name = "txtEnemyHealthRight";
+            txtEnemyHealthRight.Size = new Size(42, 25);
+            txtEnemyHealthRight.TabIndex = 14;
+            txtEnemyHealthRight.Text = "999";
             // 
-            // displayEnemyIntelligenceRight
+            // txtEnemyIntelligenceRight
             // 
-            displayEnemyIntelligenceRight.AutoSize = true;
-            displayEnemyIntelligenceRight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyIntelligenceRight.Location = new Point(173, 165);
-            displayEnemyIntelligenceRight.Name = "displayEnemyIntelligenceRight";
-            displayEnemyIntelligenceRight.Size = new Size(42, 25);
-            displayEnemyIntelligenceRight.TabIndex = 11;
-            displayEnemyIntelligenceRight.Text = "999";
+            txtEnemyIntelligenceRight.AutoSize = true;
+            txtEnemyIntelligenceRight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyIntelligenceRight.Location = new Point(173, 165);
+            txtEnemyIntelligenceRight.Name = "txtEnemyIntelligenceRight";
+            txtEnemyIntelligenceRight.Size = new Size(36, 25);
+            txtEnemyIntelligenceRight.TabIndex = 11;
+            txtEnemyIntelligenceRight.Text = "???";
             // 
-            // displayEnemyNameRight
+            // txtEnemyNameRight
             // 
-            displayEnemyNameRight.AutoSize = true;
-            displayEnemyNameRight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyNameRight.Location = new Point(173, 40);
-            displayEnemyNameRight.Name = "displayEnemyNameRight";
-            displayEnemyNameRight.Size = new Size(139, 25);
-            displayEnemyNameRight.TabIndex = 13;
-            displayEnemyNameRight.Text = "name goes here";
+            txtEnemyNameRight.AutoSize = true;
+            txtEnemyNameRight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyNameRight.Location = new Point(173, 40);
+            txtEnemyNameRight.Name = "txtEnemyNameRight";
+            txtEnemyNameRight.Size = new Size(139, 25);
+            txtEnemyNameRight.TabIndex = 13;
+            txtEnemyNameRight.Text = "name goes here";
             // 
-            // displayEnemyWisdomRight
+            // txtEnemyWisdomRight
             // 
-            displayEnemyWisdomRight.AutoSize = true;
-            displayEnemyWisdomRight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            displayEnemyWisdomRight.Location = new Point(173, 215);
-            displayEnemyWisdomRight.Name = "displayEnemyWisdomRight";
-            displayEnemyWisdomRight.Size = new Size(42, 25);
-            displayEnemyWisdomRight.TabIndex = 12;
-            displayEnemyWisdomRight.Text = "999";
+            txtEnemyWisdomRight.AutoSize = true;
+            txtEnemyWisdomRight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnemyWisdomRight.Location = new Point(173, 215);
+            txtEnemyWisdomRight.Name = "txtEnemyWisdomRight";
+            txtEnemyWisdomRight.Size = new Size(36, 25);
+            txtEnemyWisdomRight.TabIndex = 12;
+            txtEnemyWisdomRight.Text = "???";
             // 
             // groupBox1
             // 
@@ -953,76 +954,94 @@
             // 
             // RollStrength
             // 
-            RollStrength.Location = new Point(8, 698);
+            RollStrength.Location = new Point(127, 698);
             RollStrength.Name = "RollStrength";
             RollStrength.Size = new Size(160, 83);
             RollStrength.TabIndex = 28;
             RollStrength.Text = "Strength";
             RollStrength.UseVisualStyleBackColor = true;
+            RollStrength.Click += RollStrength_Click;
             // 
             // RollDexterity
             // 
-            RollDexterity.Location = new Point(265, 698);
+            RollDexterity.Location = new Point(417, 698);
             RollDexterity.Name = "RollDexterity";
             RollDexterity.Size = new Size(160, 83);
             RollDexterity.TabIndex = 29;
             RollDexterity.Text = "Dexterity";
             RollDexterity.UseVisualStyleBackColor = true;
+            RollDexterity.Click += RollDexterity_Click;
             // 
             // RollIntelligence
             // 
-            RollIntelligence.Location = new Point(536, 698);
+            RollIntelligence.Location = new Point(726, 698);
             RollIntelligence.Name = "RollIntelligence";
             RollIntelligence.Size = new Size(160, 83);
             RollIntelligence.TabIndex = 30;
             RollIntelligence.Text = "Intelligence";
             RollIntelligence.UseVisualStyleBackColor = true;
-            // 
-            // RollConstitution
-            // 
-            RollConstitution.Location = new Point(784, 698);
-            RollConstitution.Name = "RollConstitution";
-            RollConstitution.Size = new Size(160, 83);
-            RollConstitution.TabIndex = 31;
-            RollConstitution.Text = "Constitution";
-            RollConstitution.UseVisualStyleBackColor = true;
+            RollIntelligence.Click += RollIntelligence_Click;
             // 
             // RollWisdom
             // 
-            RollWisdom.Location = new Point(1022, 698);
+            RollWisdom.Location = new Point(1039, 698);
             RollWisdom.Name = "RollWisdom";
             RollWisdom.Size = new Size(160, 83);
             RollWisdom.TabIndex = 32;
             RollWisdom.Text = "Wisdom";
             RollWisdom.UseVisualStyleBackColor = true;
+            RollWisdom.Click += RollWisdom_Click;
             // 
             // RollCharisma
             // 
-            RollCharisma.Location = new Point(1270, 698);
+            RollCharisma.Location = new Point(1314, 698);
             RollCharisma.Name = "RollCharisma";
             RollCharisma.Size = new Size(160, 83);
             RollCharisma.TabIndex = 33;
             RollCharisma.Text = "Charisma";
             RollCharisma.UseVisualStyleBackColor = true;
+            RollCharisma.Click += RollCharisma_Click;
             // 
-            // button7
+            // btnTargetRight
             // 
-            button7.Location = new Point(1270, 586);
-            button7.Name = "button7";
-            button7.Size = new Size(160, 83);
-            button7.TabIndex = 34;
-            button7.Text = "button7";
-            button7.UseVisualStyleBackColor = true;
+            btnTargetRight.Location = new Point(1314, 546);
+            btnTargetRight.Name = "btnTargetRight";
+            btnTargetRight.Size = new Size(160, 83);
+            btnTargetRight.TabIndex = 34;
+            btnTargetRight.Text = "Target";
+            btnTargetRight.UseVisualStyleBackColor = true;
+            btnTargetRight.Click += btnTargetRight_Click;
+            // 
+            // btnTargetLeft
+            // 
+            btnTargetLeft.Location = new Point(127, 546);
+            btnTargetLeft.Name = "btnTargetLeft";
+            btnTargetLeft.Size = new Size(160, 83);
+            btnTargetLeft.TabIndex = 35;
+            btnTargetLeft.Text = "Target";
+            btnTargetLeft.UseVisualStyleBackColor = true;
+            btnTargetLeft.Click += btnTargetLeft_Click;
+            // 
+            // btnTargetCenter
+            // 
+            btnTargetCenter.Location = new Point(726, 546);
+            btnTargetCenter.Name = "btnTargetCenter";
+            btnTargetCenter.Size = new Size(160, 83);
+            btnTargetCenter.TabIndex = 36;
+            btnTargetCenter.Text = "Target";
+            btnTargetCenter.UseVisualStyleBackColor = true;
+            btnTargetCenter.Click += btnTargetCenter_Click;
             // 
             // CombatUI
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1561, 929);
-            Controls.Add(button7);
+            Controls.Add(btnTargetCenter);
+            Controls.Add(btnTargetLeft);
+            Controls.Add(btnTargetRight);
             Controls.Add(RollCharisma);
             Controls.Add(RollWisdom);
-            Controls.Add(RollConstitution);
             Controls.Add(RollIntelligence);
             Controls.Add(RollDexterity);
             Controls.Add(RollStrength);
@@ -1054,22 +1073,22 @@
         private Label labelCharisma;
         private Label labelWisdom;
         private GroupBox enemyDataCenter;
-        private Label displayEnemyStrengthLeft;
-        private Label displayEnemyCharismaLeft;
-        private Label displayEnemyIntelligenceLeft;
-        private Label displayEnemyWisdomLeft;
-        private Label displayEnemyNameLeft;
-        private Label displayEnemyHealthLeft;
-        private Label displayEnemyConstitutionLeft;
-        private Label displayEnemyDexterityLeft;
-        private Label enemyStrengthModifierLeft;
-        private Label enemyCharismaModifierLeft;
-        private Label enemyWisdomModifierLeft;
-        private Label enemyConstitutionModifierLeft;
-        private Label enemyIntelligenceModifierLeft;
-        private Label enemyDexterityModifierLeft;
+        private Label txtEnemyStrengthLeft;
+        private Label txtEnemyCharismaLeft;
+        private Label txtEnemyIntelligenceLeft;
+        private Label txtEnemyWisdomLeft;
+        private Label txtEnemyNameLeft;
+        private Label txtEnemyHealthLeft;
+        private Label txtEnemyConstitutionLeft;
+        private Label txtEnemyDexterityLeft;
+        private Label txtEnemyStrengthModifierLeft;
+        private Label txtEnemyCharismaModifierLeft;
+        private Label txtEnemyWisdomModifierLeft;
+        private Label txtEnemyConstitutionModifierLeft;
+        private Label txtEnemyIntelligenceModifierLeft;
+        private Label txtEnemyDexterityModifierLeft;
         private Label enemyType;
-        private Label displayEnemyTypeLeft;
+        private Label txtEnemyTypeLeft;
         private Label enemyNameLabel;
         private Label labelEnemyNameLeft;
         private Label labelEnemyHealthLeft;
@@ -1081,55 +1100,55 @@
         private Label labelEnemyWisdomLeft;
         private GroupBox enemyDataLeft;
         private Label labelEnemyTypeLeft;
-        private Label displayEnemyTypeCenter;
+        private Label txtEnemyTypeCenter;
         private Label labelEnemyNameCenter;
         private Label labelEnemyTypeCenter;
         private Label labelEnemyHealthCenter;
-        private Label enemyDexterityModifierCenter;
+        private Label txtEnemyDexterityModifierCenter;
         private Label labelEnemyConstitutionCenter;
-        private Label enemyIntelligenceModifierCenter;
+        private Label txtEnemyIntelligenceModifierCenter;
         private Label labelEnemyIntelligenceCenter;
-        private Label enemyConstitutionModifierCenter;
+        private Label txtEnemyConstitutionModifierCenter;
         private Label labelEnemyDexterityCenter;
-        private Label enemyWisdomModifierCenter;
+        private Label txtEnemyWisdomModifierCenter;
         private Label labelEnemyStrengthCenter;
-        private Label enemyCharismaModifierCenter;
+        private Label txtEnemyCharismaModifierCenter;
         private Label labelEnemyCharismaCenter;
-        private Label enemyStrengthModifierCenter;
+        private Label txtEnemyStrengthModifierCenter;
         private Label labelEnemyWisdomCenter;
-        private Label displayEnemyDexterityCenter;
-        private Label displayEnemyStrengthCenter;
-        private Label displayEnemyConstitutionCenter;
-        private Label displayEnemyCharismaCenter;
-        private Label displayEnemyHealthCenter;
-        private Label displayEnemyIntelligenceCenter;
-        private Label displayEnemyNameCenter;
-        private Label displayEnemyWisdomCenter;
+        private Label txtEnemyDexterityCenter;
+        private Label txtEnemyStrengthCenter;
+        private Label txtEnemyConstitutionCenter;
+        private Label txtEnemyCharismaCenter;
+        private Label txtEnemyHealthCenter;
+        private Label txtEnemyIntelligenceCenter;
+        private Label txtEnemyNameCenter;
+        private Label txtEnemyWisdomCenter;
         private GroupBox enemyDataRight;
-        private Label displayEnemyTypeRight;
+        private Label txtEnemyTypeRight;
         private Label labelEnemyNameRight;
         private Label labelEnemyTypeRight;
         private Label labelEnemyHealthRight;
-        private Label enemyDexterityModifierRight;
+        private Label txtEnemyDexterityModifierRight;
         private Label labelEnemyConstitutionRight;
-        private Label enemyIntelligenceModifierRight;
+        private Label txtEnemyIntelligenceModifierRight;
         private Label labelEnemyIntelligenceRight;
-        private Label enemyConstitutionModifierRight;
+        private Label txtEnemyConstitutionModifierRight;
         private Label labelEnemyDexterityRight;
-        private Label enemyWisdomModifierRight;
+        private Label txtEnemyWisdomModifierRight;
         private Label labelEnemyStrengthRight;
-        private Label enemyCharismaModifierRight;
+        private Label txtEnemyCharismaModifierRight;
         private Label labelEnemyCharismaRight;
-        private Label enemyStrengthModifierRight;
+        private Label txtEnemyStrengthModifierRight;
         private Label labelEnemyWisdomRight;
-        private Label displayEnemyDexterityRight;
-        private Label displayEnemyStrengthRight;
-        private Label displayEnemyConstitutionRight;
-        private Label displayEnemyCharismaRight;
-        private Label displayEnemyHealthRight;
-        private Label displayEnemyIntelligenceRight;
-        private Label displayEnemyNameRight;
-        private Label displayEnemyWisdomRight;
+        private Label txtEnemyDexterityRight;
+        private Label txtEnemyStrengthRight;
+        private Label txtEnemyConstitutionRight;
+        private Label txtEnemyCharismaRight;
+        private Label txtEnemyHealthRight;
+        private Label txtEnemyIntelligenceRight;
+        private Label txtEnemyNameRight;
+        private Label txtEnemyWisdomRight;
         private GroupBox groupBox3;
         private GroupBox groupBox1;
         private GroupBox groupBox5;
@@ -1137,9 +1156,10 @@
         private Button RollStrength;
         private Button RollDexterity;
         private Button RollIntelligence;
-        private Button RollConstitution;
         private Button RollWisdom;
         private Button RollCharisma;
-        private Button button7;
+        private Button btnTargetRight;
+        private Button btnTargetLeft;
+        private Button btnTargetCenter;
     }
 }

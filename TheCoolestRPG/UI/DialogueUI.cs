@@ -24,7 +24,7 @@ namespace TheCoolestRPG
         private void btnContinue_Click(object sender, EventArgs e)
         {
             Story.ProgressStory();
-            
+
 
             if (Story.GetCurrentStory() == 0 && Story.GetCurrentStoryString() == 2)
             {
@@ -100,8 +100,8 @@ namespace TheCoolestRPG
             btnContinue.Visible = true;
 
             btnApproach.Visible = false;
-            btnAvoid.Visible    = false;
-            btnRecall.Visible   = false;
+            btnAvoid.Visible = false;
+            btnRecall.Visible = false;
 
             Story.ProgressChoice((Story.GetCurrentStory() == 0) ? 1 : -2);
             Story.ResetStoryArray();
@@ -115,8 +115,8 @@ namespace TheCoolestRPG
             btnContinue.Visible = true;
 
             btnApproach.Visible = false;
-            btnAvoid.Visible    = false;
-            btnRecall.Visible   = false;
+            btnAvoid.Visible = false;
+            btnRecall.Visible = false;
 
             Story.ProgressChoice((Story.GetCurrentStory() == 0) ? 2 : -1);
             Story.ResetStoryArray();
@@ -160,20 +160,20 @@ namespace TheCoolestRPG
 
 
             // Check if player believes it themselves
-            bool pass = CharacterActions.GetCharismaSuccess(CharacterCreation.GetPlayerCharacter().getCharisma(), 
-                                                            CharacterCreation.GetPlayerCharacter().getCharismaModifier(), 
-                                                            CharacterCreation.GetPlayerCharacter().getCharisma(), 
+            bool pass = CharacterActions.GetCharismaSuccess(CharacterCreation.GetPlayerCharacter().getCharisma(),
+                                                            CharacterCreation.GetPlayerCharacter().getCharismaModifier(),
+                                                            CharacterCreation.GetPlayerCharacter().getCharisma(),
                                                             CharacterCreation.GetPlayerCharacter().getCharismaModifier());
 
             Story.ProgressChoice(3);
 
             // does player fail check?
             if (!pass)
-            { 
+            {
                 Story.SetStoryArray(5);
             }
             // does lake fail to entertain?
-            else if (!lakeAmusement) 
+            else if (!lakeAmusement)
             {
                 Story.SetStoryArray(3);
             }
@@ -181,7 +181,7 @@ namespace TheCoolestRPG
             {
                 Story.ResetStoryArray();
             }
-            
+
             btnContinue.Visible = true;
 
             btnConfirm.Visible = false;
