@@ -1060,6 +1060,7 @@
             txtDisplayWinLose.Location = new Point(349, 702);
             txtDisplayWinLose.Multiline = true;
             txtDisplayWinLose.Name = "txtDisplayWinLose";
+            txtDisplayWinLose.ReadOnly = true;
             txtDisplayWinLose.Size = new Size(357, 79);
             txtDisplayWinLose.TabIndex = 41;
             txtDisplayWinLose.Text = "???";
