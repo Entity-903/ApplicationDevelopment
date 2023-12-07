@@ -66,6 +66,12 @@ namespace TheCoolestRPG
             Close();
         }
 
+        //public static uint GetCharacterHealth( bool isPlayer, uint target = 0)
+        //{
+        //    if (isPlayer) return CharacterCreation.GetPlayerCharacter().GetHealth();
+        //    else return CharacterCreation.GetEnemies()[target].GetHealth();
+        //}
+
         public static Character[] GetEnemies()
         {
             return enemies;
@@ -80,6 +86,11 @@ namespace TheCoolestRPG
         {
             if (player != null) return player;
             else return null;
+        }
+
+        public static void KillPlayer()
+        {
+            player = null;
         }
 
         private void numericStrength_ValueChanged(object sender, EventArgs e)

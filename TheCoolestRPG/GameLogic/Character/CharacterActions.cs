@@ -28,33 +28,67 @@ namespace TheCoolestRPG.GameLogic.Character
 
         // Combat Calculations ---------------------------------------------------------------------------------------------------------------------------------------
 
-        public static void GetAttackRoll(uint attackRoll, uint attackRollModifier, uint defendRoll, uint defendRollModifier, uint wisdomSuccess, uint enemyResistance, uint target)
+        public static void GetAttackRoll(uint attackRoll, uint attackRollModifier, uint defendRoll, uint defendRollModifier, uint wisdomSuccess, uint enemyConstitution, uint target)
         {
-            CharacterCreation.GetEnemies()[target].DamageHealth((((int)attackRoll + (int)attackRollModifier) * 2) + ((int)attackRoll - (int)defendRoll) * (int)wisdomSuccess - ((int)enemyResistance / 2));
+            CharacterCreation.GetEnemies()[target].DamageHealth(((((int)attackRoll + (int)attackRollModifier) * 2) + ((int)attackRoll - (int)defendRoll)) * (int)wisdomSuccess - ((int)enemyConstitution / 2));
         }
 
-        public static void GetDexterityRoll(uint attackRoll, uint attackRollModifier, uint defendRoll, uint defendRollModifier, uint wisdomSuccess, uint enemyResistance, uint target)
+        public static void GetDexterityRoll(uint attackRoll, uint attackRollModifier, uint defendRoll, uint defendRollModifier, uint wisdomSuccess, uint enemyConstitution, uint target)
         {
-            CharacterCreation.GetEnemies()[target].DamageHealth((((int)attackRoll + (int)attackRollModifier) * 2) + ((int)attackRoll - (int)defendRoll) * (int)wisdomSuccess - ((int)enemyResistance / 2));
+            CharacterCreation.GetEnemies()[target].DamageHealth(((((int)attackRoll + (int)attackRollModifier) * 2) + ((int)attackRoll - (int)defendRoll)) * (int)wisdomSuccess - ((int)enemyConstitution / 2));
         }
 
-        public static void GetIntelligenceRoll(uint attackRoll, uint attackRollModifier, uint defendRoll, uint defendRollModifier, uint wisdomSuccess, uint enemyResistance, uint target)
+        public static void GetIntelligenceRoll(uint attackRoll, uint attackRollModifier, uint defendRoll, uint defendRollModifier, uint wisdomSuccess, uint enemyConstitution, uint target)
         {
-            CharacterCreation.GetEnemies()[target].DamageHealth((((int)attackRoll + (int)attackRollModifier) * 2) + ((int)attackRoll - (int)defendRoll) * (int)wisdomSuccess - ((int)enemyResistance / 2));
+            CharacterCreation.GetEnemies()[target].DamageHealth(((((int)attackRoll + (int)attackRollModifier) * 2) + ((int)attackRoll - (int)defendRoll)) * (int)wisdomSuccess - ((int)enemyConstitution / 2));
         }
 
-        public static uint GetCharismaRoll(uint attackRoll, uint attackRollModifier, uint defendRoll, uint defendRollModifier, uint wisdomSuccess, uint enemyResistance)
+        public static void GetCharismaRoll(uint attackRoll, uint attackRollModifier, uint defendRoll, uint defendRollModifier, uint wisdomSuccess, uint enemyConstitution, uint target)
         {
-            return (((attackRoll + attackRollModifier) * 2) + (attackRoll - defendRoll)) * wisdomSuccess;
+            //                                       |||||||||||||
+            //CharacterCreation.GetEnemies()[target].DamageResolve((((int)attackRoll + (int)attackRollModifier) * 2) + ((int)attackRoll - (int)defendRoll) * (int)wisdomSuccess - ((int)enemyConstitution / 2));
         }
 
-        public static uint GetEnemiesAttacks()
+        public static bool GetWisdomCalculation(uint attackRoll, uint attackRollModifier, uint defendRoll, uint defendRollModifier)
         {
-            for (int i = 0; i < 3; i++)
+            bool result = (attackRoll + attackRollModifier) > (defendRoll + defendRollModifier);
+
+            return result;
+        }
+
+        public static void GetEnemyAttack(uint enemyAttack, uint enemyAttackModifier, uint playerDefense, uint playerConstitution, uint enemy, uint enemyWisdomSuccess = 1)
+        {
+            bool wisdomPass = false;
+
+            if (CombatUI.GetEnemiesActive() > 0)
             {
+                    if (CharacterCreation.GetPlayerExists())
+                    {
+                        if (Combat.Combat.GetWisdomActive())
+                        {
+                            wisdomPass = GetWisdomCalculation(CharacterCreation.GetPlayerCharacter().GetWisdom(),
+                                                          CharacterCreation.GetPlayerCharacter().GetWisdomModifier(),
+                                                          CharacterCreation.GetEnemies()[enemy].GetWisdom(),
+                                                          CharacterCreation.GetEnemies()[enemy].GetWisdomModifier());
+                        }
 
+                        if (!wisdomPass)
+                        { 
+                                CharacterCreation.GetPlayerCharacter().DamageHealth(((((int)enemyAttack + (int)enemyAttackModifier) * 2) + ((int)enemyAttack - (int)playerDefense) * (int)enemyWisdomSuccess - ((int)playerConstitution)) / 3);
+                                if (Combat.Combat.GetPlayerWisdomSuccess() != 1)
+                                {
+                                    Combat.Combat.ResetPlayerWisdomSuccess();
+                                }
+                        
+                        }
+                        else
+                        {
+                            CombatUI.SetReveal(true, enemy);
+                            Combat.Combat.BoostPlayerWisdomSuccess();
+                        }
+                    }
             }
-        }
+        }                            
     }
 }
 

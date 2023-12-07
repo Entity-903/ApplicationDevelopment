@@ -125,7 +125,7 @@ namespace TheCoolestRPG
         private void btnCheckFamiliarity_Click(object sender, EventArgs e)
         {
             // Player rolls a wisdom check to attempt remembering where the player has heard of the lake before
-            bool pass = CharacterActions.GetWisdomSuccess(CharacterCreation.GetPlayerCharacter().getWisdom(), CharacterCreation.GetPlayerCharacter().getWisdomModifier(), 7, 1);
+            bool pass = CharacterActions.GetWisdomSuccess(CharacterCreation.GetPlayerCharacter().GetWisdom(), CharacterCreation.GetPlayerCharacter().GetWisdomModifier(), 7, 1);
 
             Story.ProgressChoice(3);
 
@@ -160,11 +160,10 @@ namespace TheCoolestRPG
 
 
             // Check if player believes it themselves
-            bool pass = CharacterActions.GetCharismaSuccess(CharacterCreation.GetPlayerCharacter().getCharisma(),
-                                                            CharacterCreation.GetPlayerCharacter().getCharismaModifier(),
-                                                            CharacterCreation.GetPlayerCharacter().getCharisma(),
-                                                            CharacterCreation.GetPlayerCharacter().getCharismaModifier());
-
+            bool pass = CharacterActions.GetCharismaSuccess(CharacterCreation.GetPlayerCharacter().GetCharisma(),
+                                                            CharacterCreation.GetPlayerCharacter().GetCharismaModifier(),
+                                                            CharacterCreation.GetPlayerCharacter().GetCharisma(),
+                                                            CharacterCreation.GetPlayerCharacter().GetCharismaModifier());
             Story.ProgressChoice(3);
 
             // does player fail check?

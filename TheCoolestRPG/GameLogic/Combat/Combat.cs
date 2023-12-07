@@ -19,6 +19,7 @@ namespace TheCoolestRPG.GameLogic.Combat
         public static void ResetPlayerWisdomSuccess()
         {
             playerWisdomSuccess = 1;
+            Combat.SetWisdomActive(false);
         }
 
         public static void BoostPlayerWisdomSuccess()
@@ -34,6 +35,14 @@ namespace TheCoolestRPG.GameLogic.Combat
         public static void SetWisdomActive(bool value)
         {
             wisdomActive = value;
+        }
+
+        public static string CheckTarget(uint value)
+        {
+            if (value == 0) { return "Left"; }
+            else
+            if (value == 1) { return "Center"; }
+            else { return "Right"; }
         }
     }
 }

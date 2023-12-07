@@ -107,14 +107,19 @@
             groupBox1 = new GroupBox();
             groupBox5 = new GroupBox();
             groupBox6 = new GroupBox();
-            RollStrength = new Button();
-            RollDexterity = new Button();
-            RollIntelligence = new Button();
-            RollWisdom = new Button();
-            RollCharisma = new Button();
+            btnRollStrength = new Button();
+            btnRollDexterity = new Button();
+            btnRollIntelligence = new Button();
+            btnRollWisdom = new Button();
+            btnRollCharisma = new Button();
             btnTargetRight = new Button();
             btnTargetLeft = new Button();
             btnTargetCenter = new Button();
+            labelWisdomSuccess = new Label();
+            txtDisplayPlayerHealth = new Label();
+            txtDisplayWinLose = new TextBox();
+            txtDisplayWisdomSuccess = new Label();
+            labelDisplayPlayerHealth = new Label();
             enemyDataLeft.SuspendLayout();
             enemyDataCenter.SuspendLayout();
             enemyDataRight.SuspendLayout();
@@ -952,55 +957,55 @@
             groupBox6.TabStop = false;
             groupBox6.Text = "EnemyImageRight";
             // 
-            // RollStrength
+            // btnRollStrength
             // 
-            RollStrength.Location = new Point(127, 698);
-            RollStrength.Name = "RollStrength";
-            RollStrength.Size = new Size(160, 83);
-            RollStrength.TabIndex = 28;
-            RollStrength.Text = "Strength";
-            RollStrength.UseVisualStyleBackColor = true;
-            RollStrength.Click += RollStrength_Click;
+            btnRollStrength.Location = new Point(713, 698);
+            btnRollStrength.Name = "btnRollStrength";
+            btnRollStrength.Size = new Size(160, 83);
+            btnRollStrength.TabIndex = 28;
+            btnRollStrength.Text = "Strength";
+            btnRollStrength.UseVisualStyleBackColor = true;
+            btnRollStrength.Click += RollStrength_Click;
             // 
-            // RollDexterity
+            // btnRollDexterity
             // 
-            RollDexterity.Location = new Point(417, 698);
-            RollDexterity.Name = "RollDexterity";
-            RollDexterity.Size = new Size(160, 83);
-            RollDexterity.TabIndex = 29;
-            RollDexterity.Text = "Dexterity";
-            RollDexterity.UseVisualStyleBackColor = true;
-            RollDexterity.Click += RollDexterity_Click;
+            btnRollDexterity.Location = new Point(879, 698);
+            btnRollDexterity.Name = "btnRollDexterity";
+            btnRollDexterity.Size = new Size(160, 83);
+            btnRollDexterity.TabIndex = 29;
+            btnRollDexterity.Text = "Dexterity";
+            btnRollDexterity.UseVisualStyleBackColor = true;
+            btnRollDexterity.Click += RollDexterity_Click;
             // 
-            // RollIntelligence
+            // btnRollIntelligence
             // 
-            RollIntelligence.Location = new Point(726, 698);
-            RollIntelligence.Name = "RollIntelligence";
-            RollIntelligence.Size = new Size(160, 83);
-            RollIntelligence.TabIndex = 30;
-            RollIntelligence.Text = "Intelligence";
-            RollIntelligence.UseVisualStyleBackColor = true;
-            RollIntelligence.Click += RollIntelligence_Click;
+            btnRollIntelligence.Location = new Point(1045, 698);
+            btnRollIntelligence.Name = "btnRollIntelligence";
+            btnRollIntelligence.Size = new Size(160, 83);
+            btnRollIntelligence.TabIndex = 30;
+            btnRollIntelligence.Text = "Intelligence";
+            btnRollIntelligence.UseVisualStyleBackColor = true;
+            btnRollIntelligence.Click += RollIntelligence_Click;
             // 
-            // RollWisdom
+            // btnRollWisdom
             // 
-            RollWisdom.Location = new Point(1039, 698);
-            RollWisdom.Name = "RollWisdom";
-            RollWisdom.Size = new Size(160, 83);
-            RollWisdom.TabIndex = 32;
-            RollWisdom.Text = "Wisdom";
-            RollWisdom.UseVisualStyleBackColor = true;
-            RollWisdom.Click += RollWisdom_Click;
+            btnRollWisdom.Location = new Point(1211, 698);
+            btnRollWisdom.Name = "btnRollWisdom";
+            btnRollWisdom.Size = new Size(160, 83);
+            btnRollWisdom.TabIndex = 32;
+            btnRollWisdom.Text = "Wisdom";
+            btnRollWisdom.UseVisualStyleBackColor = true;
+            btnRollWisdom.Click += RollWisdom_Click;
             // 
-            // RollCharisma
+            // btnRollCharisma
             // 
-            RollCharisma.Location = new Point(1314, 698);
-            RollCharisma.Name = "RollCharisma";
-            RollCharisma.Size = new Size(160, 83);
-            RollCharisma.TabIndex = 33;
-            RollCharisma.Text = "Charisma";
-            RollCharisma.UseVisualStyleBackColor = true;
-            RollCharisma.Click += RollCharisma_Click;
+            btnRollCharisma.Location = new Point(1377, 698);
+            btnRollCharisma.Name = "btnRollCharisma";
+            btnRollCharisma.Size = new Size(160, 83);
+            btnRollCharisma.TabIndex = 33;
+            btnRollCharisma.Text = "Charisma (Does Nothing Here)";
+            btnRollCharisma.UseVisualStyleBackColor = true;
+            btnRollCharisma.Click += RollCharisma_Click;
             // 
             // btnTargetRight
             // 
@@ -1008,7 +1013,7 @@
             btnTargetRight.Name = "btnTargetRight";
             btnTargetRight.Size = new Size(160, 83);
             btnTargetRight.TabIndex = 34;
-            btnTargetRight.Text = "Target";
+            btnTargetRight.Text = "Target Right";
             btnTargetRight.UseVisualStyleBackColor = true;
             btnTargetRight.Click += btnTargetRight_Click;
             // 
@@ -1018,7 +1023,7 @@
             btnTargetLeft.Name = "btnTargetLeft";
             btnTargetLeft.Size = new Size(160, 83);
             btnTargetLeft.TabIndex = 35;
-            btnTargetLeft.Text = "Target";
+            btnTargetLeft.Text = "Target Left";
             btnTargetLeft.UseVisualStyleBackColor = true;
             btnTargetLeft.Click += btnTargetLeft_Click;
             // 
@@ -1028,23 +1033,74 @@
             btnTargetCenter.Name = "btnTargetCenter";
             btnTargetCenter.Size = new Size(160, 83);
             btnTargetCenter.TabIndex = 36;
-            btnTargetCenter.Text = "Target";
+            btnTargetCenter.Text = "Target Center";
             btnTargetCenter.UseVisualStyleBackColor = true;
             btnTargetCenter.Click += btnTargetCenter_Click;
+            // 
+            // labelWisdomSuccess
+            // 
+            labelWisdomSuccess.AutoSize = true;
+            labelWisdomSuccess.Location = new Point(12, 756);
+            labelWisdomSuccess.Name = "labelWisdomSuccess";
+            labelWisdomSuccess.Size = new Size(144, 25);
+            labelWisdomSuccess.TabIndex = 38;
+            labelWisdomSuccess.Text = "WisdomSuccess:";
+            // 
+            // txtDisplayPlayerHealth
+            // 
+            txtDisplayPlayerHealth.AutoSize = true;
+            txtDisplayPlayerHealth.Location = new Point(85, 727);
+            txtDisplayPlayerHealth.Name = "txtDisplayPlayerHealth";
+            txtDisplayPlayerHealth.Size = new Size(36, 25);
+            txtDisplayPlayerHealth.TabIndex = 39;
+            txtDisplayPlayerHealth.Text = "???";
+            // 
+            // txtDisplayWinLose
+            // 
+            txtDisplayWinLose.Location = new Point(349, 702);
+            txtDisplayWinLose.Multiline = true;
+            txtDisplayWinLose.Name = "txtDisplayWinLose";
+            txtDisplayWinLose.Size = new Size(357, 79);
+            txtDisplayWinLose.TabIndex = 41;
+            txtDisplayWinLose.Text = "???";
+            txtDisplayWinLose.TextAlign = HorizontalAlignment.Center;
+            // 
+            // txtDisplayWisdomSuccess
+            // 
+            txtDisplayWisdomSuccess.AutoSize = true;
+            txtDisplayWisdomSuccess.Location = new Point(162, 756);
+            txtDisplayWisdomSuccess.Name = "txtDisplayWisdomSuccess";
+            txtDisplayWisdomSuccess.Size = new Size(36, 25);
+            txtDisplayWisdomSuccess.TabIndex = 42;
+            txtDisplayWisdomSuccess.Text = "???";
+            // 
+            // labelDisplayPlayerHealth
+            // 
+            labelDisplayPlayerHealth.AutoSize = true;
+            labelDisplayPlayerHealth.Location = new Point(12, 727);
+            labelDisplayPlayerHealth.Name = "labelDisplayPlayerHealth";
+            labelDisplayPlayerHealth.Size = new Size(67, 25);
+            labelDisplayPlayerHealth.TabIndex = 43;
+            labelDisplayPlayerHealth.Text = "Health:";
             // 
             // CombatUI
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1561, 929);
+            Controls.Add(labelDisplayPlayerHealth);
+            Controls.Add(txtDisplayWisdomSuccess);
+            Controls.Add(txtDisplayWinLose);
+            Controls.Add(txtDisplayPlayerHealth);
+            Controls.Add(labelWisdomSuccess);
             Controls.Add(btnTargetCenter);
             Controls.Add(btnTargetLeft);
             Controls.Add(btnTargetRight);
-            Controls.Add(RollCharisma);
-            Controls.Add(RollWisdom);
-            Controls.Add(RollIntelligence);
-            Controls.Add(RollDexterity);
-            Controls.Add(RollStrength);
+            Controls.Add(btnRollCharisma);
+            Controls.Add(btnRollWisdom);
+            Controls.Add(btnRollIntelligence);
+            Controls.Add(btnRollDexterity);
+            Controls.Add(btnRollStrength);
             Controls.Add(groupBox5);
             Controls.Add(groupBox6);
             Controls.Add(groupBox1);
@@ -1060,6 +1116,7 @@
             enemyDataRight.ResumeLayout(false);
             enemyDataRight.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -1153,13 +1210,18 @@
         private GroupBox groupBox1;
         private GroupBox groupBox5;
         private GroupBox groupBox6;
-        private Button RollStrength;
-        private Button RollDexterity;
-        private Button RollIntelligence;
-        private Button RollWisdom;
-        private Button RollCharisma;
+        private Button btnRollStrength;
+        private Button btnRollDexterity;
+        private Button btnRollIntelligence;
+        private Button btnRollWisdom;
+        private Button btnRollCharisma;
         private Button btnTargetRight;
         private Button btnTargetLeft;
         private Button btnTargetCenter;
+        private Label labelDisplayPlayerHealth;
+        private Label labelWisdomSuccess;
+        private Label txtDisplayPlayerHealth;
+        private TextBox txtDisplayWinLose;
+        private Label txtDisplayWisdomSuccess;
     }
 }

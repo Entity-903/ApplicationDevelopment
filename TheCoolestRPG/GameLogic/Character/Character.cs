@@ -129,62 +129,62 @@ namespace TheCoolestRPG.GameLogic.Character
             if (value > 0) health -= (uint)value;
         }
 
-        public uint getStrength()
+        public uint GetStrength()
         {
             return strength;
         }
 
-        public uint getStrengthModifier()
+        public uint GetStrengthModifier()
         {
             return strengthModifier;
         }
 
-        public uint getDexterity()
+        public uint GetDexterity()
         {
             return dexterity;
         }
 
-        public uint getDexterityModifier()
+        public uint GetDexterityModifier()
         {
             return dexterityModifier;
         }
 
-        public uint getIntelligence()
+        public uint GetIntelligence()
         {
             return intelligence;
         }
 
-        public uint getIntelligenceModifier()
+        public uint GetIntelligenceModifier()
         {
             return intelligenceModifier;
         }
 
-        public uint getConstitution()
+        public uint GetConstitution()
         {
             return constitution;
         }
 
-        public uint getConstitutionModifier()
+        public uint GetConstitutionModifier()
         {
             return constitutionModifier;
         }
 
-        public uint getWisdom()
+        public uint GetWisdom()
         {
             return wisdom;
         }
 
-        public uint getWisdomModifier()
+        public uint GetWisdomModifier()
         {
             return wisdomModifier;
         }
 
-        public uint getCharisma()
+        public uint GetCharisma()
         {
             return charisma;
         }
 
-        public uint getCharismaModifier()
+        public uint GetCharismaModifier()
         {
             return charismaModifier;
         }
