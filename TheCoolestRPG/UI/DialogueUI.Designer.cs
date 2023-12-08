@@ -57,6 +57,7 @@
             txtCurrentDialogue.Location = new Point(243, 373);
             txtCurrentDialogue.Multiline = true;
             txtCurrentDialogue.Name = "txtCurrentDialogue";
+            txtCurrentDialogue.ReadOnly = true;
             txtCurrentDialogue.Size = new Size(694, 150);
             txtCurrentDialogue.TabIndex = 0;
             txtCurrentDialogue.Text = "Start with Path(0)[0]";
@@ -152,7 +153,7 @@
             btnRecall.Text = "Recall (Wisdom)";
             btnRecall.UseVisualStyleBackColor = true;
             btnRecall.Visible = false;
-            btnRecall.Click += btnCheckFamiliarity_Click;
+            btnRecall.Click += btnRecall_Click;
             // 
             // DialogueUI
             // 

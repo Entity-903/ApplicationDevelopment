@@ -133,7 +133,7 @@ namespace TheCoolestRPG.GameLogic.Story
             story[1] = "The site refers to this as SCP-2316.";
             story[2] = "Approach?";
             // If fail wisdom check
-            story[3] = "You have no recollection as to what this is, but you know it has some form of personal significance.";
+            story[3] = "You have no recollection as to what this is, but you know it has some form of personal significance."; // adding \n does not solve the problem with the program not displaying the entire string
             story[4] = "Approach?";
 
             return story;

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheCoolestRPG_YourWelcome_.Additional_UI.DialogueUI"
+             Title="DialogueUI">
+    <VerticalStackLayout>
+        <Label
+            Padding="30,0"
+            VerticalOptions="Start" IsVisible="True" />
+
+        <Label
+                Text="Dialogue"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" VerticalOptions="Start" />
+
+        <Entry
+            x:Name="txtCurrentDialogue"
+            Text="Start with Path(0)[0]"
+            Margin="0,150,0,0"
+            SemanticProperties.HeadingLevel="Level2"
+            FontSize="32"
+            IsReadOnly="True"
+            HorizontalOptions="Center" VerticalOptions="Start"
+            />
+
+        <Button 
+            x:Name="btnContinue"
+            Text="Continue"
+            Margin="0,150,0,0"
+            FontSize="32"
+            IsVisible="True"
+            Clicked="btnContinue_Click"
+            HorizontalOptions="Center" VerticalOptions="End"
+            />
+
+        <Button 
+            x:Name="btnApproach"
+            Text="Approach"
+            FontSize="32"
+            HorizontalOptions="Center" VerticalOptions="Start" 
+            IsVisible="False"
+            Clicked="btnApproach_Click"
+            />
+
+        <Button 
+            x:Name="btnAvoid"
+            Text="Avoid"
+            FontSize="32"
+            HorizontalOptions="Center" VerticalOptions="Start" 
+            IsVisible="False"
+            Clicked="btnAvoid_Click"
+            />
+
+        <Button 
+            x:Name="btnRecall"
+            Text="Recall (Wisdom)"
+            FontSize="32"
+            HorizontalOptions="Center" VerticalOptions="Start" 
+            IsVisible="False"
+            Clicked="btnRecall_Click"
+            />
+
+        <Button 
+            x:Name="btnConfirm"
+            Text="Confirm"
+            FontSize="32"
+            HorizontalOptions="Center" VerticalOptions="Start" 
+            IsVisible="False"
+            Clicked="btnConfirm_Click"
+            />
+
+        <Button 
+            x:Name="btnDeny"
+            Text="Deny"
+            FontSize="32"
+            HorizontalOptions="Center" VerticalOptions="Start" 
+            IsVisible="False"
+            Clicked="btnDeny_Click"
+            />
+
+        <Button 
+            x:Name="btnCombatStart"
+            Text="Fight"
+            FontSize="32"
+            HorizontalOptions="Center" VerticalOptions="Start" 
+            IsVisible="False"
+            Clicked="btnCombatStart_Click"
+            />
+
+    </VerticalStackLayout>
+</ContentPage>

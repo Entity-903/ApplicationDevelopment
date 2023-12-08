@@ -122,7 +122,7 @@ namespace TheCoolestRPG
             Story.ResetStoryArray();
             txtCurrentDialogue.Text = Story.GetCurrentStoryText();
         }
-        private void btnCheckFamiliarity_Click(object sender, EventArgs e)
+        private void btnRecall_Click(object sender, EventArgs e)
         {
             // Player rolls a wisdom check to attempt remembering where the player has heard of the lake before
             bool pass = CharacterActions.GetWisdomSuccess(Character.GetPlayerCharacter().GetWisdom(), Character.GetPlayerCharacter().GetWisdomModifier(), 7, 1);

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheCoolestRPG_YourWelcome_.Additional_UI.CombatUI"
+             Title="CombatUI">
+    <VerticalStackLayout>
+        <Label
+            Padding="30,0"
+            VerticalOptions="Start" IsVisible="True" />
+
+        <Image
+            
+            />
+
+        <Label
+            Text="Health"
+            SemanticProperties.HeadingLevel="Level3"
+            FontSize="16"
+            HorizontalOptions="Start" VerticalOptions="Start" />
+
+    </VerticalStackLayout>
+</ContentPage>

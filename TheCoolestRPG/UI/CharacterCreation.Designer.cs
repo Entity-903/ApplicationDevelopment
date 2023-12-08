@@ -249,7 +249,7 @@
             labelDexterityModifier.TabIndex = 19;
             labelDexterityModifier.Text = "+2";
             // 
-            // CreateCharacterUI
+            // CharacterCreation
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -274,7 +274,7 @@
             Controls.Add(numericWisdom);
             Controls.Add(numericCharisma);
             Controls.Add(numericStrength);
-            Name = "CreateCharacterUI";
+            Name = "CharacterCreation";
             Text = "Character Selection/Creation";
             ((System.ComponentModel.ISupportInitialize)numericStrength).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericCharisma).EndInit();

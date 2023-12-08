@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheCoolestRPG", "TheCoolest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheCoolestRPGLibrary", "TheCoolestRPGLibrary\TheCoolestRPGLibrary.csproj", "{1BC776B8-E75C-4700-A5E0-8006A8F97483}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheCoolestRPG(YourWelcome)", "TheCoolestRPG(YourWelcome)\TheCoolestRPG(YourWelcome).csproj", "{C3D7FC97-DA0C-4529-9644-0712FD8477A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,12 @@ Global
 		{1BC776B8-E75C-4700-A5E0-8006A8F97483}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BC776B8-E75C-4700-A5E0-8006A8F97483}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BC776B8-E75C-4700-A5E0-8006A8F97483}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3D7FC97-DA0C-4529-9644-0712FD8477A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3D7FC97-DA0C-4529-9644-0712FD8477A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3D7FC97-DA0C-4529-9644-0712FD8477A5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C3D7FC97-DA0C-4529-9644-0712FD8477A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3D7FC97-DA0C-4529-9644-0712FD8477A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3D7FC97-DA0C-4529-9644-0712FD8477A5}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

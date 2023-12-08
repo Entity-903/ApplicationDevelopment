@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheCoolestRPG_YourWelcome_.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Start" IsVisible="True">
+
+            <Label
+                Text="Custom Character"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Start" VerticalOptions="Start" />
+
+
+            <Label
+                Text="Strength: "
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Start" VerticalOptions="Start" />
+
+            <Entry
+            x:Name="txtStrength"
+            Text="10"
+            Margin="110,-60,0,0"
+            TextChanged="Entry_TextChanged" 
+            HorizontalOptions="Start" VerticalOptions="Start"/>
+
+            <Label
+                Text="Dexterity: "
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Start" VerticalOptions="Start" />
+
+            <Entry
+            x:Name="txtDexterity"
+            Text="10"
+            Margin="110,-60,0,0"
+            TextChanged="Entry_TextChanged" 
+            HorizontalOptions="Start" VerticalOptions="Start" />
+
+            <Label
+                Text="Intelligence: "
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Start" VerticalOptions="Start" />
+
+            <Entry
+            x:Name="txtIntelligence"
+            Text="10"
+            Margin="110,-60,0,0"
+            TextChanged="Entry_TextChanged" 
+            HorizontalOptions="Start" VerticalOptions="Start" />
+
+            <Label
+                Text="Constitution: "
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Start" VerticalOptions="Start" />
+
+            <Entry
+            x:Name="txtConstitution"
+            Text="10"
+            Margin="110,-60,0,0"
+            TextChanged="Entry_TextChanged"
+            HorizontalOptions="Start" VerticalOptions="Start"  
+            />
+
+            <Label
+                Text="Wisdom: "
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Start" VerticalOptions="Start" />
+
+            <Entry
+            x:Name="txtWisdom"
+            Text="10"
+            Margin="110,-60,0,0"
+            TextChanged="Entry_TextChanged" 
+            HorizontalOptions="Start" VerticalOptions="Start" />
+
+            <Label
+                Text="Charisma: "
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Start" VerticalOptions="Start" />
+
+            <Entry
+            x:Name="txtCharisma"
+            Text="10"
+            Margin="110,-60,0,0"
+            TextChanged="Entry_TextChanged" 
+            HorizontalOptions="Start" VerticalOptions="Start" />
+
+            <Button
+                x:Name="btnCustomCreate"
+                Text="Create Void Entity"
+                Clicked="OnCustomCreate"
+                HorizontalOptions="Start" VerticalOptions="Start" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
