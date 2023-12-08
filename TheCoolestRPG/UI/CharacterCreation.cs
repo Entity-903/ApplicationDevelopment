@@ -14,10 +14,10 @@ namespace TheCoolestRPG
 {
     public partial class CharacterCreation : Form
     {
-        private static Character? player;
-        private static Character[]? enemies = new Character[3];
+        //private static Character? player;
+        //private static Character[]? enemies = new Character[3];
 
-        private static bool playerExists = false;
+        //private static bool playerExists = false;
 
         public CharacterCreation()
         {
@@ -26,8 +26,6 @@ namespace TheCoolestRPG
 
         private void btnCustomCreate_Click(object sender, EventArgs e)
         {
-            playerExists = true;
-
             uint strength             = (uint)numericStrength.Value;
             uint dexterity            = (uint)numericDexterity.Value;
             uint intelligence         = (uint)numericIntelligence.Value;
@@ -42,7 +40,7 @@ namespace TheCoolestRPG
             uint wisdomModifier       = (uint)((wisdom) * 0.25f);
             uint charismaModifier     = (uint)((charisma) * 0.25f);
 
-            player = new Character(10 * constitution, Character.Type.custom, strength, strengthModifier, dexterity, dexterityModifier, intelligence, intelligenceModifier, constitution, constitutionModifier, wisdom, wisdomModifier, charisma, charismaModifier);
+            Character.SetPlayerExists(true, new Character(10 * constitution, Character.Type.custom, strength, strengthModifier, dexterity, dexterityModifier, intelligence, intelligenceModifier, constitution, constitutionModifier, wisdom, wisdomModifier, charisma, charismaModifier));
             
             uint zombieStrength     = 13;
             uint zombieDexterity    = 8;
@@ -58,10 +56,7 @@ namespace TheCoolestRPG
             uint zombieWisdomModifier       = (uint)((zombieWisdom) * 0.25f);
             uint zombieCharismaModifier     = (uint)((zombieCharisma) * 0.25f);
 
-            for (int i = 0; i < 3; i++)
-            {
-                enemies[i] = new Character(10 * zombieConstitution, Character.Type.zombie, zombieStrength, zombieStrengthModifier, zombieDexterity, zombieDexterityModifier, zombieIntelligence, zombieIntelligenceModifier, zombieConstitution, zombieConstitutionModifier, zombieWisdom, zombieWisdomModifier, zombieCharisma, zombieCharismaModifier);
-            }
+            Character.SetEnemies(new Character(10 * zombieConstitution, Character.Type.zombie, zombieStrength, zombieStrengthModifier, zombieDexterity, zombieDexterityModifier, zombieIntelligence, zombieIntelligenceModifier, zombieConstitution, zombieConstitutionModifier, zombieWisdom, zombieWisdomModifier, zombieCharisma, zombieCharismaModifier));
 
             Close();
         }
@@ -72,26 +67,26 @@ namespace TheCoolestRPG
         //    else return CharacterCreation.GetEnemies()[target].GetHealth();
         //}
 
-        public static Character[] GetEnemies()
-        {
-            return enemies;
-        }
+        //public static Character[] GetEnemies()
+        //{
+        //    return enemies;
+        //}
 
-        public static bool GetPlayerExists()
-        {
-            return (player != null);
-        }
+        //public static bool GetPlayerExists()
+        //{
+        //    return (player != null);
+        //}
 
-        public static Character? GetPlayerCharacter()
-        {
-            if (player != null) return player;
-            else return null;
-        }
+        //public static Character? GetPlayerCharacter()
+        //{
+        //    if (player != null) return player;
+        //    else return null;
+        //}
 
-        public static void KillPlayer()
-        {
-            player = null;
-        }
+        //public static void KillPlayer()
+        //{
+        //    player = null;
+        //}
 
         private void numericStrength_ValueChanged(object sender, EventArgs e)
         {

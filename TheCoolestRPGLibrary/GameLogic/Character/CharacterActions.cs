@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace TheCoolestRPG.GameLogic.Character
 {
-    internal class CharacterActions
+    public class CharacterActions
     {
         // If I were to incorperate charisma into gameplay, also create a resolve variable, equivalent to 10 * charisma
-
 
         // Dialogue and Status Checks -------------------------------------------------------------------------------------------------------------------------------------------
         public static bool GetCharismaSuccess(uint attackRoll, uint attackRollModifier, uint defendRoll, uint defendRollModifier)
@@ -30,17 +29,17 @@ namespace TheCoolestRPG.GameLogic.Character
 
         public static void GetAttackRoll(uint attackRoll, uint attackRollModifier, uint defendRoll, uint defendRollModifier, uint wisdomSuccess, uint enemyConstitution, uint target)
         {
-            CharacterCreation.GetEnemies()[target].DamageHealth(((((int)attackRoll + (int)attackRollModifier) * 2) + ((int)attackRoll - (int)defendRoll)) * (int)wisdomSuccess - ((int)enemyConstitution / 2));
+            Character.GetEnemies()[target].DamageHealth(((((int)attackRoll + (int)attackRollModifier) * 2) + ((int)attackRoll - (int)defendRoll)) * (int)wisdomSuccess - ((int)enemyConstitution / 2));
         }
 
         public static void GetDexterityRoll(uint attackRoll, uint attackRollModifier, uint defendRoll, uint defendRollModifier, uint wisdomSuccess, uint enemyConstitution, uint target)
         {
-            CharacterCreation.GetEnemies()[target].DamageHealth(((((int)attackRoll + (int)attackRollModifier) * 2) + ((int)attackRoll - (int)defendRoll)) * (int)wisdomSuccess - ((int)enemyConstitution / 2));
+            Character.GetEnemies()[target].DamageHealth(((((int)attackRoll + (int)attackRollModifier) * 2) + ((int)attackRoll - (int)defendRoll)) * (int)wisdomSuccess - ((int)enemyConstitution / 2));
         }
 
         public static void GetIntelligenceRoll(uint attackRoll, uint attackRollModifier, uint defendRoll, uint defendRollModifier, uint wisdomSuccess, uint enemyConstitution, uint target)
         {
-            CharacterCreation.GetEnemies()[target].DamageHealth(((((int)attackRoll + (int)attackRollModifier) * 2) + ((int)attackRoll - (int)defendRoll)) * (int)wisdomSuccess - ((int)enemyConstitution / 2));
+            Character.GetEnemies()[target].DamageHealth(((((int)attackRoll + (int)attackRollModifier) * 2) + ((int)attackRoll - (int)defendRoll)) * (int)wisdomSuccess - ((int)enemyConstitution / 2));
         }
 
         public static void GetCharismaRoll(uint attackRoll, uint attackRollModifier, uint defendRoll, uint defendRollModifier, uint wisdomSuccess, uint enemyConstitution, uint target)
@@ -60,21 +59,21 @@ namespace TheCoolestRPG.GameLogic.Character
         {
             bool wisdomPass = false;
 
-            if (CombatUI.GetEnemiesActive() > 0)
+            if (Combat.Combat.GetEnemiesActive() > 0)
             {
-                    if (CharacterCreation.GetPlayerExists())
+                    if (Character.GetPlayerExists())
                     {
                         if (Combat.Combat.GetWisdomActive())
                         {
-                            wisdomPass = GetWisdomCalculation(CharacterCreation.GetPlayerCharacter().GetWisdom(),
-                                                          CharacterCreation.GetPlayerCharacter().GetWisdomModifier(),
-                                                          CharacterCreation.GetEnemies()[enemy].GetWisdom(),
-                                                          CharacterCreation.GetEnemies()[enemy].GetWisdomModifier());
+                            wisdomPass = GetWisdomCalculation(Character.GetPlayerCharacter().GetWisdom(),
+                                                              Character.GetPlayerCharacter().GetWisdomModifier(),
+                                                              Character.GetEnemies()[enemy].GetWisdom(),
+                                                              Character.GetEnemies()[enemy].GetWisdomModifier());
                         }
 
                         if (!wisdomPass)
                         { 
-                                CharacterCreation.GetPlayerCharacter().DamageHealth(((((int)enemyAttack + (int)enemyAttackModifier) * 2) + ((int)enemyAttack - (int)playerDefense) * (int)enemyWisdomSuccess - ((int)playerConstitution)) / 3);
+                                Character.GetPlayerCharacter().DamageHealth(((((int)enemyAttack + (int)enemyAttackModifier) * 2) + ((int)enemyAttack - (int)playerDefense) * (int)enemyWisdomSuccess - ((int)playerConstitution)) / 3);
                                 if (Combat.Combat.GetPlayerWisdomSuccess() != 1)
                                 {
                                     Combat.Combat.ResetPlayerWisdomSuccess();
@@ -83,7 +82,7 @@ namespace TheCoolestRPG.GameLogic.Character
                         }
                         else
                         {
-                            CombatUI.SetReveal(true, enemy);
+                            Combat.Combat.SetReveal(true, enemy);
                             Combat.Combat.BoostPlayerWisdomSuccess();
                         }
                     }

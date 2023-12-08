@@ -23,7 +23,7 @@ namespace TheCoolestRPG
             Application.Run(new CharacterCreation());
 
             // Opens once CreateCharacterUI is closed and player != null
-            if (CharacterCreation.GetPlayerExists()) Application.Run(new DialogueUI());
+            if (GameLogic.Character.Character.GetPlayerExists()) Application.Run(new DialogueUI());
 
             // Opens once DialogueUI is closed and initializeFight is true
             if (Story.GetInitalizeFight()) Application.Run(new CombatUI());

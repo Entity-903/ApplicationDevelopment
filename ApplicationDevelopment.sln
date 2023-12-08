@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheCoolestMazeRunner", "The
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheCoolestSafe", "TheCoolestSafe\TheCoolestSafe.csproj", "{B06C8A82-4E19-4B49-BD72-65B6E2074FCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheCoolestRPG", "TheCoolestRPG\TheCoolestRPG.csproj", "{5D3A9341-C135-409A-AB2D-F3EB767AC138}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheCoolestRPG", "TheCoolestRPG\TheCoolestRPG.csproj", "{5D3A9341-C135-409A-AB2D-F3EB767AC138}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheCoolestRPGLibrary", "TheCoolestRPGLibrary\TheCoolestRPGLibrary.csproj", "{1BC776B8-E75C-4700-A5E0-8006A8F97483}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5D3A9341-C135-409A-AB2D-F3EB767AC138}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D3A9341-C135-409A-AB2D-F3EB767AC138}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D3A9341-C135-409A-AB2D-F3EB767AC138}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BC776B8-E75C-4700-A5E0-8006A8F97483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BC776B8-E75C-4700-A5E0-8006A8F97483}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BC776B8-E75C-4700-A5E0-8006A8F97483}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BC776B8-E75C-4700-A5E0-8006A8F97483}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

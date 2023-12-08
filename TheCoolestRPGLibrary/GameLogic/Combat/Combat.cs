@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace TheCoolestRPG.GameLogic.Combat
 {
-    internal class Combat
+    public class Combat
     {
+        static uint enemiesActive = 3;
+        static bool[] reveals = { false, false, false };
         private static uint playerWisdomSuccess = 1;
         private static bool wisdomActive = false;
 
@@ -43,6 +45,26 @@ namespace TheCoolestRPG.GameLogic.Combat
             else
             if (value == 1) { return "Center"; }
             else { return "Right"; }
+        }
+
+        public static uint GetEnemiesActive()
+        {
+            return enemiesActive;
+        }
+
+        public static void DecreaseEnemiesActive(uint value)
+        {
+            enemiesActive -= value;
+        }
+
+        public static void SetReveal(bool value, uint target)
+        {
+            reveals[target] = value;
+        }
+
+        public static bool[] GetReveals()
+        {
+            return reveals;
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Media;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,6 +25,10 @@ namespace TheCoolestRPG.GameLogic.Character
 {
     public class Character
     {
+        private static Character? player;
+        private static Character[]? enemies = new Character[3];
+
+        private static bool playerExists = false;
         public Character(uint health, Type type, uint strength, uint strengthModifier, uint dexterity, uint dexterityModifier, uint intelligence, uint intelligenceModifier, uint constitution, uint constitutionModifier, uint wisdom, uint wisdomModifier, uint charisma, uint charismaModifier) 
         {
             this.health = health;
@@ -193,5 +198,43 @@ namespace TheCoolestRPG.GameLogic.Character
         {
             return type;
         }
+
+        public static void SetPlayerExists( bool value, Character character)
+        {
+            playerExists = value;
+            player = character;
+        }
+
+        public static void SetEnemies( Character character)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                enemies[i] = character;
+            }
+        }
+
+        // Logic Methods
+        public static Character[] GetEnemies()
+        {
+            return enemies;
+        }
+
+        public static bool GetPlayerExists()
+        {
+            return (player != null);
+        }
+
+        public static Character? GetPlayerCharacter()
+        {
+            if (player != null) return player;
+            else return null;
+        }
+
+        public static void KillPlayer()
+        {
+            player = null;
+        }
     }
+
+
 }

@@ -8,58 +8,41 @@ namespace TheCoolestRPG
         public CombatUI()
         {
             InitializeComponent();
-            txtEnemyNameLeft.Text = CharacterCreation.GetEnemies()[0].GetCharacterType().ToString();
-            txtEnemyNameCenter.Text = CharacterCreation.GetEnemies()[1].GetCharacterType().ToString();
-            txtEnemyNameRight.Text = CharacterCreation.GetEnemies()[2].GetCharacterType().ToString();
+            txtEnemyNameLeft.Text = Character.GetEnemies()[0].GetCharacterType().ToString();
+            txtEnemyNameCenter.Text = Character.GetEnemies()[1].GetCharacterType().ToString();
+            txtEnemyNameRight.Text = Character.GetEnemies()[2].GetCharacterType().ToString();
 
-            txtEnemyHealthLeft.Text = CharacterCreation.GetEnemies()[0].GetHealth().ToString();
-            txtEnemyHealthCenter.Text = CharacterCreation.GetEnemies()[1].GetHealth().ToString();
-            txtEnemyHealthRight.Text = CharacterCreation.GetEnemies()[2].GetHealth().ToString();
+            txtEnemyHealthLeft.Text = Character.GetEnemies()[0].GetHealth().ToString();
+            txtEnemyHealthCenter.Text = Character.GetEnemies()[1].GetHealth().ToString();
+            txtEnemyHealthRight.Text = Character.GetEnemies()[2].GetHealth().ToString();
 
-            txtDisplayPlayerHealth.Text = CharacterCreation.GetPlayerCharacter().GetHealth().ToString();
+            txtDisplayPlayerHealth.Text = Character.GetPlayerCharacter().GetHealth().ToString();
             txtDisplayWisdomSuccess.Text = Combat.GetPlayerWisdomSuccess().ToString();
         }
 
         uint target = 0;
-        static uint enemiesActive = 3;
-        static bool[] reveals = { false, false, false };
-
-        public static bool[] GetReveals()
-        {
-            return reveals;
-        }
-
-        public static uint GetEnemiesActive()
-        {
-            return enemiesActive;
-        }
-
-        public static void SetReveal(bool value, uint target)
-        {
-            reveals[target] = value;
-        }
 
         private void RollStrength_Click(object sender, EventArgs e)
         {
-            CharacterActions.GetAttackRoll(CharacterCreation.GetPlayerCharacter().GetStrength(),
-                                           CharacterCreation.GetPlayerCharacter().GetStrengthModifier(),
-                                           CharacterCreation.GetEnemies()[target].GetStrength(),
-                                           CharacterCreation.GetEnemies()[target].GetStrengthModifier(),
+            CharacterActions.GetAttackRoll(Character.GetPlayerCharacter().GetStrength(),
+                                           Character.GetPlayerCharacter().GetStrengthModifier(),
+                                           Character.GetEnemies()[target].GetStrength(),
+                                           Character.GetEnemies()[target].GetStrengthModifier(),
                                            Combat.GetPlayerWisdomSuccess(),
-                                           CharacterCreation.GetEnemies()[target].GetConstitution(),
+                                           Character.GetEnemies()[target].GetConstitution(),
                                            target);
 
-            if (CharacterCreation.GetEnemies()[target].GetHealth() > 1000)
+            if (Character.GetEnemies()[target].GetHealth() > 1000)
             {
-                CharacterCreation.GetEnemies()[target] = new Character(0, Character.Type.zombie, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-                enemiesActive--;
+                Character.GetEnemies()[target] = new Character(0, Character.Type.zombie, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                Combat.DecreaseEnemiesActive(1);
             }
 
-            if (target == 0) txtEnemyHealthLeft.Text = CharacterCreation.GetEnemies()[target].GetHealth().ToString();
-            if (target == 1) txtEnemyHealthCenter.Text = CharacterCreation.GetEnemies()[target].GetHealth().ToString();
-            if (target == 2) txtEnemyHealthRight.Text = CharacterCreation.GetEnemies()[target].GetHealth().ToString();
+            if (target == 0) txtEnemyHealthLeft.Text = Character.GetEnemies()[target].GetHealth().ToString();
+            if (target == 1) txtEnemyHealthCenter.Text = Character.GetEnemies()[target].GetHealth().ToString();
+            if (target == 2) txtEnemyHealthRight.Text = Character.GetEnemies()[target].GetHealth().ToString();
 
-            if (enemiesActive == 0)
+            if (Combat.GetEnemiesActive() == 0)
             {
                 txtDisplayWinLose.Text = "You have succeeded!";
                 btnTargetLeft.Visible = false;
@@ -72,19 +55,19 @@ namespace TheCoolestRPG
                 btnRollCharisma.Visible = false;
             }
 
-            if (enemiesActive != 0)
+            if (Combat.GetEnemiesActive() != 0)
             {
-                for (uint i = 0; i < enemiesActive; i++)
-                    CharacterActions.GetEnemyAttack(CharacterCreation.GetEnemies()[i].GetStrength(),
-                                                    CharacterCreation.GetPlayerCharacter().GetStrength(),
-                                                    CharacterCreation.GetEnemies()[i].GetStrengthModifier(),
-                                                    CharacterCreation.GetPlayerCharacter().GetConstitution(),
+                for (uint i = 0; i < Combat.GetEnemiesActive(); i++)
+                    CharacterActions.GetEnemyAttack(Character.GetEnemies()[i].GetStrength(),
+                                                    Character.GetPlayerCharacter().GetStrength(),
+                                                    Character.GetEnemies()[i].GetStrengthModifier(),
+                                                    Character.GetPlayerCharacter().GetConstitution(),
                                                     i);
             }
 
-            if (CharacterCreation.GetPlayerCharacter().GetHealth() > 1000) CharacterCreation.KillPlayer();
+            if (Character.GetPlayerCharacter().GetHealth() > 1000) Character.KillPlayer();
 
-            if (CharacterCreation.GetPlayerExists() == false)
+            if (Character.GetPlayerExists() == false)
             {
                 txtDisplayWinLose.Text = "You have fallen!";
                 btnTargetLeft.Visible = false;
@@ -100,7 +83,7 @@ namespace TheCoolestRPG
             {
                 if (Combat.GetPlayerWisdomSuccess() > 1) Combat.ResetPlayerWisdomSuccess();
 
-                txtDisplayPlayerHealth.Text = CharacterCreation.GetPlayerCharacter().GetHealth().ToString();
+                txtDisplayPlayerHealth.Text = Character.GetPlayerCharacter().GetHealth().ToString();
                 txtDisplayWisdomSuccess.Text = Combat.GetPlayerWisdomSuccess().ToString();
             }
 
@@ -108,25 +91,25 @@ namespace TheCoolestRPG
 
         private void RollDexterity_Click(object sender, EventArgs e)
         {
-            CharacterActions.GetAttackRoll(CharacterCreation.GetPlayerCharacter().GetDexterity(),
-                                           CharacterCreation.GetPlayerCharacter().GetDexterityModifier(),
-                                           CharacterCreation.GetEnemies()[target].GetDexterity(),
-                                           CharacterCreation.GetEnemies()[target].GetDexterityModifier(),
+            CharacterActions.GetAttackRoll(Character.GetPlayerCharacter().GetDexterity(),
+                                           Character.GetPlayerCharacter().GetDexterityModifier(),
+                                           Character.GetEnemies()[target].GetDexterity(),
+                                           Character.GetEnemies()[target].GetDexterityModifier(),
                                            Combat.GetPlayerWisdomSuccess(),
-                                           CharacterCreation.GetEnemies()[target].GetConstitution(),
+                                           Character.GetEnemies()[target].GetConstitution(),
                                            target);
 
-            if (CharacterCreation.GetEnemies()[target].GetHealth() > 1000)
+            if (Character.GetEnemies()[target].GetHealth() > 1000)
             {
-                CharacterCreation.GetEnemies()[target] = new Character(0, Character.Type.zombie, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-                enemiesActive--;
+                Character.GetEnemies()[target] = new Character(0, Character.Type.zombie, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                Combat.DecreaseEnemiesActive(1);
             }
 
-            if (target == 0) txtEnemyHealthLeft.Text = CharacterCreation.GetEnemies()[target].GetHealth().ToString();
-            if (target == 1) txtEnemyHealthCenter.Text = CharacterCreation.GetEnemies()[target].GetHealth().ToString();
-            if (target == 2) txtEnemyHealthRight.Text = CharacterCreation.GetEnemies()[target].GetHealth().ToString();
+            if (target == 0) txtEnemyHealthLeft.Text   = Character.GetEnemies()[target].GetHealth().ToString();
+            if (target == 1) txtEnemyHealthCenter.Text = Character.GetEnemies()[target].GetHealth().ToString();
+            if (target == 2) txtEnemyHealthRight.Text  = Character.GetEnemies()[target].GetHealth().ToString();
 
-            if (enemiesActive == 0)
+            if (Combat.GetEnemiesActive() == 0)
             {
                 txtDisplayWinLose.Text = "You have succeeded!";
                 btnTargetLeft.Visible = false;
@@ -139,19 +122,19 @@ namespace TheCoolestRPG
                 btnRollCharisma.Visible = false;
             }
 
-            if (enemiesActive != 0)
+            if (Combat.GetEnemiesActive() != 0)
             {
-                for (uint i = 0; i < enemiesActive; i++)
-                    CharacterActions.GetEnemyAttack(CharacterCreation.GetEnemies()[i].GetDexterity(),
-                                                    CharacterCreation.GetPlayerCharacter().GetDexterity(),
-                                                    CharacterCreation.GetEnemies()[i].GetDexterityModifier(),
-                                                    CharacterCreation.GetPlayerCharacter().GetConstitution(),
+                for (uint i = 0; i < Combat.GetEnemiesActive(); i++)
+                    CharacterActions.GetEnemyAttack(Character.GetEnemies()[i].GetDexterity(),
+                                                    Character.GetPlayerCharacter().GetDexterity(),
+                                                    Character.GetEnemies()[i].GetDexterityModifier(),
+                                                    Character.GetPlayerCharacter().GetConstitution(),
                                                     i);
             }
 
-            if (CharacterCreation.GetPlayerCharacter().GetHealth() > 1000) CharacterCreation.KillPlayer();
+            if (Character.GetPlayerCharacter().GetHealth() > 1000) Character.KillPlayer();
 
-            if (CharacterCreation.GetPlayerExists() == false)
+            if (Character.GetPlayerExists() == false)
             {
                 txtDisplayWinLose.Text = "You have fallen!";
                 btnTargetLeft.Visible = false;
@@ -167,7 +150,7 @@ namespace TheCoolestRPG
             {
                 if (Combat.GetPlayerWisdomSuccess() > 1) Combat.ResetPlayerWisdomSuccess();
 
-                txtDisplayPlayerHealth.Text = CharacterCreation.GetPlayerCharacter().GetHealth().ToString();
+                txtDisplayPlayerHealth.Text = Character.GetPlayerCharacter().GetHealth().ToString();
                 txtDisplayWisdomSuccess.Text = Combat.GetPlayerWisdomSuccess().ToString();
             }
 
@@ -175,25 +158,25 @@ namespace TheCoolestRPG
 
         private void RollIntelligence_Click(object sender, EventArgs e)
         {
-            CharacterActions.GetAttackRoll(CharacterCreation.GetPlayerCharacter().GetIntelligence(),
-                                           CharacterCreation.GetPlayerCharacter().GetIntelligenceModifier(),
-                                           CharacterCreation.GetEnemies()[target].GetIntelligence(),
-                                           CharacterCreation.GetEnemies()[target].GetIntelligenceModifier(),
+            CharacterActions.GetAttackRoll(Character.GetPlayerCharacter().GetIntelligence(),
+                                           Character.GetPlayerCharacter().GetIntelligenceModifier(),
+                                           Character.GetEnemies()[target].GetIntelligence(),
+                                           Character.GetEnemies()[target].GetIntelligenceModifier(),
                                            Combat.GetPlayerWisdomSuccess(),
-                                           CharacterCreation.GetEnemies()[target].GetConstitution(),
+                                           Character.GetEnemies()[target].GetConstitution(),
                                            target);
 
-            if (CharacterCreation.GetEnemies()[target].GetHealth() > 1000)
+            if (Character.GetEnemies()[target].GetHealth() > 1000)
             {
-                CharacterCreation.GetEnemies()[target] = new Character(0, Character.Type.zombie, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-                enemiesActive--;
+                Character.GetEnemies()[target] = new Character(0, Character.Type.zombie, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                Combat.DecreaseEnemiesActive(1);
             }
 
-            if (target == 0) txtEnemyHealthLeft.Text = CharacterCreation.GetEnemies()[target].GetHealth().ToString();
-            if (target == 1) txtEnemyHealthCenter.Text = CharacterCreation.GetEnemies()[target].GetHealth().ToString();
-            if (target == 2) txtEnemyHealthRight.Text = CharacterCreation.GetEnemies()[target].GetHealth().ToString();
+            if (target == 0) txtEnemyHealthLeft.Text = Character.GetEnemies()[target].GetHealth().ToString();
+            if (target == 1) txtEnemyHealthCenter.Text = Character.GetEnemies()[target].GetHealth().ToString();
+            if (target == 2) txtEnemyHealthRight.Text = Character.GetEnemies()[target].GetHealth().ToString();
 
-            if (enemiesActive == 0)
+            if (Combat.GetEnemiesActive() == 0)
             {
                 txtDisplayWinLose.Text = "You have succeeded!";
                 btnTargetLeft.Visible = false;
@@ -206,19 +189,19 @@ namespace TheCoolestRPG
                 btnRollCharisma.Visible = false;
             }
 
-            if (enemiesActive != 0)
+            if (Combat.GetEnemiesActive() != 0)
             {
-                for (uint i = 0; i < enemiesActive; i++)
-                    CharacterActions.GetEnemyAttack(CharacterCreation.GetEnemies()[i].GetIntelligence(),
-                                                    CharacterCreation.GetPlayerCharacter().GetIntelligence(),
-                                                    CharacterCreation.GetEnemies()[i].GetIntelligenceModifier(),
-                                                    CharacterCreation.GetPlayerCharacter().GetConstitution(),
+                for (uint i = 0; i < Combat.GetEnemiesActive(); i++)
+                    CharacterActions.GetEnemyAttack(Character.GetEnemies()[i].GetIntelligence(),
+                                                    Character.GetPlayerCharacter().GetIntelligence(),
+                                                    Character.GetEnemies()[i].GetIntelligenceModifier(),
+                                                    Character.GetPlayerCharacter().GetConstitution(),
                                                     i);
             }
 
-            if (CharacterCreation.GetPlayerCharacter().GetHealth() > 1000) CharacterCreation.KillPlayer();
+            if (Character.GetPlayerCharacter().GetHealth() > 1000) Character.KillPlayer();
 
-            if (CharacterCreation.GetPlayerExists() == false)
+            if (Character.GetPlayerExists() == false)
             {
                 txtDisplayWinLose.Text = "You have fallen!";
                 btnTargetLeft.Visible = false;
@@ -234,7 +217,7 @@ namespace TheCoolestRPG
             {
                 if (Combat.GetPlayerWisdomSuccess() > 1) Combat.ResetPlayerWisdomSuccess();
 
-                txtDisplayPlayerHealth.Text = CharacterCreation.GetPlayerCharacter().GetHealth().ToString();
+                txtDisplayPlayerHealth.Text = Character.GetPlayerCharacter().GetHealth().ToString();
                 txtDisplayWisdomSuccess.Text = Combat.GetPlayerWisdomSuccess().ToString();
             }
 
@@ -244,65 +227,65 @@ namespace TheCoolestRPG
         {
             Combat.SetWisdomActive(true);
 
-            if (enemiesActive != 0)
+            if (Combat.GetEnemiesActive() != 0)
             {
-                for (uint i = 0; i < enemiesActive; i++)
-                    CharacterActions.GetEnemyAttack(CharacterCreation.GetEnemies()[i].GetStrength(),
-                                                    CharacterCreation.GetEnemies()[i].GetStrengthModifier(),
-                                                    CharacterCreation.GetPlayerCharacter().GetStrength(),
-                                                    CharacterCreation.GetPlayerCharacter().GetConstitution(),
+                for (uint i = 0; i < Combat.GetEnemiesActive(); i++)
+                    CharacterActions.GetEnemyAttack(Character.GetEnemies()[i].GetStrength(),
+                                                    Character.GetEnemies()[i].GetStrengthModifier(),
+                                                    Character.GetPlayerCharacter().GetStrength(),
+                                                    Character.GetPlayerCharacter().GetConstitution(),
                                                     i);
             }
 
             Combat.SetWisdomActive(false);
 
-            if (reveals[0] == true)
+            if (Combat.GetReveals()[0] == true)
             {
-                txtEnemyStrengthLeft.Text = CharacterCreation.GetEnemies()[0].GetStrength().ToString();
-                txtEnemyStrengthModifierLeft.Text = CharacterCreation.GetEnemies()[0].GetStrengthModifier().ToString();
-                txtEnemyDexterityLeft.Text = CharacterCreation.GetEnemies()[0].GetDexterity().ToString();
-                txtEnemyDexterityModifierLeft.Text = CharacterCreation.GetEnemies()[0].GetDexterityModifier().ToString();
-                txtEnemyIntelligenceLeft.Text = CharacterCreation.GetEnemies()[0].GetIntelligence().ToString();
-                txtEnemyIntelligenceModifierLeft.Text = CharacterCreation.GetEnemies()[0].GetIntelligenceModifier().ToString();
-                txtEnemyConstitutionLeft.Text = CharacterCreation.GetEnemies()[0].GetConstitution().ToString();
-                txtEnemyConstitutionModifierLeft.Text = CharacterCreation.GetEnemies()[0].GetConstitutionModifier().ToString();
-                txtEnemyWisdomLeft.Text = CharacterCreation.GetEnemies()[0].GetWisdom().ToString();
-                txtEnemyWisdomModifierLeft.Text = CharacterCreation.GetEnemies()[0].GetWisdomModifier().ToString();
-                txtEnemyCharismaLeft.Text = CharacterCreation.GetEnemies()[0].GetCharisma().ToString();
-                txtEnemyCharismaModifierLeft.Text = CharacterCreation.GetEnemies()[0].GetCharismaModifier().ToString();
+                txtEnemyStrengthLeft.Text = Character.GetEnemies()[0].GetStrength().ToString();
+                txtEnemyStrengthModifierLeft.Text = Character.GetEnemies()[0].GetStrengthModifier().ToString();
+                txtEnemyDexterityLeft.Text = Character.GetEnemies()[0].GetDexterity().ToString();
+                txtEnemyDexterityModifierLeft.Text = Character.GetEnemies()[0].GetDexterityModifier().ToString();
+                txtEnemyIntelligenceLeft.Text = Character.GetEnemies()[0].GetIntelligence().ToString();
+                txtEnemyIntelligenceModifierLeft.Text = Character.GetEnemies()[0].GetIntelligenceModifier().ToString();
+                txtEnemyConstitutionLeft.Text = Character.GetEnemies()[0].GetConstitution().ToString();
+                txtEnemyConstitutionModifierLeft.Text = Character.GetEnemies()[0].GetConstitutionModifier().ToString();
+                txtEnemyWisdomLeft.Text = Character.GetEnemies()[0].GetWisdom().ToString();
+                txtEnemyWisdomModifierLeft.Text = Character.GetEnemies()[0].GetWisdomModifier().ToString();
+                txtEnemyCharismaLeft.Text = Character.GetEnemies()[0].GetCharisma().ToString();
+                txtEnemyCharismaModifierLeft.Text = Character.GetEnemies()[0].GetCharismaModifier().ToString();
             }
-            if (reveals[1] == true)
+            if (Combat.GetReveals()[1] == true)
             {
-                txtEnemyStrengthCenter.Text = CharacterCreation.GetEnemies()[1].GetStrength().ToString();
-                txtEnemyStrengthModifierCenter.Text = CharacterCreation.GetEnemies()[1].GetStrengthModifier().ToString();
-                txtEnemyDexterityCenter.Text = CharacterCreation.GetEnemies()[1].GetDexterity().ToString();
-                txtEnemyDexterityModifierCenter.Text = CharacterCreation.GetEnemies()[1].GetDexterityModifier().ToString();
-                txtEnemyIntelligenceCenter.Text = CharacterCreation.GetEnemies()[1].GetIntelligence().ToString();
-                txtEnemyIntelligenceModifierCenter.Text = CharacterCreation.GetEnemies()[1].GetIntelligenceModifier().ToString();
-                txtEnemyConstitutionCenter.Text = CharacterCreation.GetEnemies()[1].GetConstitution().ToString();
-                txtEnemyConstitutionModifierCenter.Text = CharacterCreation.GetEnemies()[1].GetConstitutionModifier().ToString();
-                txtEnemyWisdomCenter.Text = CharacterCreation.GetEnemies()[1].GetWisdom().ToString();
-                txtEnemyWisdomModifierCenter.Text = CharacterCreation.GetEnemies()[1].GetWisdomModifier().ToString();
-                txtEnemyCharismaCenter.Text = CharacterCreation.GetEnemies()[1].GetCharisma().ToString();
-                txtEnemyCharismaModifierCenter.Text = CharacterCreation.GetEnemies()[1].GetCharismaModifier().ToString();
+                txtEnemyStrengthCenter.Text = Character.GetEnemies()[1].GetStrength().ToString();
+                txtEnemyStrengthModifierCenter.Text = Character.GetEnemies()[1].GetStrengthModifier().ToString();
+                txtEnemyDexterityCenter.Text = Character.GetEnemies()[1].GetDexterity().ToString();
+                txtEnemyDexterityModifierCenter.Text = Character.GetEnemies()[1].GetDexterityModifier().ToString();
+                txtEnemyIntelligenceCenter.Text = Character.GetEnemies()[1].GetIntelligence().ToString();
+                txtEnemyIntelligenceModifierCenter.Text = Character.GetEnemies()[1].GetIntelligenceModifier().ToString();
+                txtEnemyConstitutionCenter.Text = Character.GetEnemies()[1].GetConstitution().ToString();
+                txtEnemyConstitutionModifierCenter.Text = Character.GetEnemies()[1].GetConstitutionModifier().ToString();
+                txtEnemyWisdomCenter.Text = Character.GetEnemies()[1].GetWisdom().ToString();
+                txtEnemyWisdomModifierCenter.Text = Character.GetEnemies()[1].GetWisdomModifier().ToString();
+                txtEnemyCharismaCenter.Text = Character.GetEnemies()[1].GetCharisma().ToString();
+                txtEnemyCharismaModifierCenter.Text = Character.GetEnemies()[1].GetCharismaModifier().ToString();
             }
-            if (reveals[2] == true)
+            if (Combat.GetReveals()[2] == true)
             {
-                txtEnemyStrengthRight.Text = CharacterCreation.GetEnemies()[2].GetStrength().ToString();
-                txtEnemyStrengthModifierRight.Text = CharacterCreation.GetEnemies()[2].GetStrengthModifier().ToString();
-                txtEnemyDexterityRight.Text = CharacterCreation.GetEnemies()[2].GetDexterity().ToString();
-                txtEnemyDexterityModifierRight.Text = CharacterCreation.GetEnemies()[2].GetDexterityModifier().ToString();
-                txtEnemyIntelligenceRight.Text = CharacterCreation.GetEnemies()[2].GetIntelligence().ToString();
-                txtEnemyIntelligenceModifierRight.Text = CharacterCreation.GetEnemies()[2].GetIntelligenceModifier().ToString();
-                txtEnemyConstitutionRight.Text = CharacterCreation.GetEnemies()[2].GetConstitution().ToString();
-                txtEnemyConstitutionModifierRight.Text = CharacterCreation.GetEnemies()[2].GetConstitutionModifier().ToString();
-                txtEnemyWisdomRight.Text = CharacterCreation.GetEnemies()[2].GetWisdom().ToString();
-                txtEnemyWisdomModifierRight.Text = CharacterCreation.GetEnemies()[2].GetWisdomModifier().ToString();
-                txtEnemyCharismaRight.Text = CharacterCreation.GetEnemies()[2].GetCharisma().ToString();
-                txtEnemyCharismaModifierRight.Text = CharacterCreation.GetEnemies()[2].GetCharismaModifier().ToString();
+                txtEnemyStrengthRight.Text = Character.GetEnemies()[2].GetStrength().ToString();
+                txtEnemyStrengthModifierRight.Text = Character.GetEnemies()[2].GetStrengthModifier().ToString();
+                txtEnemyDexterityRight.Text = Character.GetEnemies()[2].GetDexterity().ToString();
+                txtEnemyDexterityModifierRight.Text = Character.GetEnemies()[2].GetDexterityModifier().ToString();
+                txtEnemyIntelligenceRight.Text = Character.GetEnemies()[2].GetIntelligence().ToString();
+                txtEnemyIntelligenceModifierRight.Text = Character.GetEnemies()[2].GetIntelligenceModifier().ToString();
+                txtEnemyConstitutionRight.Text = Character.GetEnemies()[2].GetConstitution().ToString();
+                txtEnemyConstitutionModifierRight.Text = Character.GetEnemies()[2].GetConstitutionModifier().ToString();
+                txtEnemyWisdomRight.Text = Character.GetEnemies()[2].GetWisdom().ToString();
+                txtEnemyWisdomModifierRight.Text = Character.GetEnemies()[2].GetWisdomModifier().ToString();
+                txtEnemyCharismaRight.Text = Character.GetEnemies()[2].GetCharisma().ToString();
+                txtEnemyCharismaModifierRight.Text = Character.GetEnemies()[2].GetCharismaModifier().ToString();
             }
 
-            txtDisplayPlayerHealth.Text = CharacterCreation.GetPlayerCharacter().GetHealth().ToString();
+            txtDisplayPlayerHealth.Text = Character.GetPlayerCharacter().GetHealth().ToString();
             txtDisplayWisdomSuccess.Text = Combat.GetPlayerWisdomSuccess().ToString();
         }
 

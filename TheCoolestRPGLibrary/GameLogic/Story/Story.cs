@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheCoolestRPG.GameLogic.Story
 {
-    internal class Story
+    public class Story
     {
         private static bool initalizeFight = false;
         private static string[] story = new string[MAX_STRINGS];
