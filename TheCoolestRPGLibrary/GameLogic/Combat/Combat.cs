@@ -68,3 +68,35 @@ namespace TheCoolestRPG.GameLogic.Combat
         }
     }
 }
+
+//<Image
+//    x:Name="imgEnemyLeft"
+//    Source = "zombie.webp"
+//    Scale="0.15"
+//    Margin="-600,-550,0,-450"
+//    HorizontalOptions="Start" VerticalOptions="Start"/>
+//
+
+//<Image
+//    x:Name="imgEnemyCenter"
+//    Source = "zombie.webp"
+//    Scale="0.15"
+//    Margin="-600,-550,-150,-150"
+//    HorizontalOptions="Start" VerticalOptions="Start" />
+//
+
+//<Image
+//    x:Name="imgEnemyRight"
+//    Source = "zombie.webp"
+//    Scale="0.15"
+//    Margin="-700,-650,-150,-150"
+//    HorizontalOptions="Start" VerticalOptions="Start" />
+//
+
+//<Button
+//    x:Name="btnRollStrength"
+//    Text="Strength"
+//    Margin="0,0,0,0"
+//    FontSize="32"
+//    IsVisible="True"
+//    HorizontalOptions="Start" VerticalOptions="End" />

@@ -1,22 +1,269 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TheCoolestRPG_YourWelcome_.Additional_UI.CombatUI"
-             Title="CombatUI">
-    <VerticalStackLayout>
-        <Label
-            Padding="30,0"
-            VerticalOptions="Start" IsVisible="True" />
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="TheCoolestRPG_YourWelcome_.Additional_UI.CombatUI"
+			 Title="CombatUI">
+	<VerticalStackLayout>
 
-        <Image
-            
-            />
+		<Label
+	Padding="30,0"
+	VerticalOptions="Start" IsVisible="True" />
 
-        <Label
-            Text="Health"
-            SemanticProperties.HeadingLevel="Level3"
-            FontSize="16"
-            HorizontalOptions="Start" VerticalOptions="Start" />
 
-    </VerticalStackLayout>
+		<Label
+	Text="Name: "
+	SemanticProperties.HeadingLevel="Level2"
+	FontSize="18"
+	Margin="0,0,0,-35"
+	HorizontalOptions="Start" VerticalOptions="Start" />
+
+
+		<Entry
+	x:Name="txtEnemyNameLeft"
+	Text="Name Here"
+	Margin="70,0,0,0"
+	IsReadOnly="True"
+	HorizontalOptions="Start" 
+	VerticalOptions="Start"/>
+
+
+		<Label
+	Text="Health: "
+	SemanticProperties.HeadingLevel="Level2"
+	FontSize="18"
+	Margin="0,20,0,0"
+	HorizontalOptions="Start" 
+	VerticalOptions="Start" />
+
+
+		<Entry
+	x:Name="txtEnemyHealthLeft"
+	Text="Health Here"
+	Margin="70,-30,0,0"
+	IsReadOnly="True"
+	HorizontalOptions="Start" 
+	VerticalOptions="Start" />
+
+
+		<Label
+	Text="Type: "
+	SemanticProperties.HeadingLevel="Level2"
+	FontSize="18"
+	Margin="0,20,0,0"
+	HorizontalOptions="Start" 
+	VerticalOptions="Start" />
+
+
+		<Entry
+	x:Name="txtEnemyTypeLeft"
+	Text="Enemy Type Here"
+	Margin="70,-30,0,0"
+	IsReadOnly="True"
+	HorizontalOptions="Start" VerticalOptions="Start" />
+
+
+		<Label
+	Text="Name: "
+	SemanticProperties.HeadingLevel="Level2"
+	FontSize="18"
+	Margin="300,-150,0,-35"
+	HorizontalOptions="Start" VerticalOptions="Start" />
+
+
+		<Entry
+	x:Name="txtEnemyNameCenter"
+	Text="Name Here"
+	Margin="370,0,0,0"
+	IsReadOnly="True"
+	HorizontalOptions="Start" VerticalOptions="Start"/>
+
+
+		<Label
+	Text="Health: "
+	SemanticProperties.HeadingLevel="Level2"
+	FontSize="18"
+	Margin="300,20,0,0"
+	HorizontalOptions="Start" VerticalOptions="Start" />
+
+
+		<Entry
+	x:Name="txtEnemyHealthCenter"
+	Text="Health Here"
+	Margin="370,-30,0,0"
+	IsReadOnly="True"
+	HorizontalOptions="Start" VerticalOptions="Start" />
+
+
+		<Label
+	Text="Type: "
+	SemanticProperties.HeadingLevel="Level2"
+	FontSize="18"
+	Margin="300,20,0,0"
+	HorizontalOptions="Start" VerticalOptions="Start" />
+
+
+		<Entry
+	x:Name="txtEnemyTypeCenter"
+	Text="Enemy Type Here"
+	Margin="370,-30,0,-150"
+	IsReadOnly="True"
+	HorizontalOptions="Start" VerticalOptions="Start" />
+
+
+		<Label
+	Text="Name: "
+	SemanticProperties.HeadingLevel="Level2"
+	FontSize="18"
+	Margin="600,0,0,-35"
+	HorizontalOptions="Start" VerticalOptions="Start" />
+
+
+
+		<Entry
+	x:Name="txtEnemyNameRight"
+	Text="Name Here"
+	Margin="670,0,0,0"
+	IsReadOnly="True"
+	HorizontalOptions="Start" VerticalOptions="Start"/>
+
+
+
+		<Label
+	Text="Health: "
+	SemanticProperties.HeadingLevel="Level2"
+	FontSize="18"
+	Margin="600,20,0,0"
+	HorizontalOptions="Start" VerticalOptions="Start" />
+
+
+
+		<Entry
+	x:Name="txtEnemyHealthRight"
+	Text="Health Here"
+	Margin="670,-30,0,0"
+	IsReadOnly="True"
+	HorizontalOptions="Start" VerticalOptions="Start" />
+
+
+
+		<Label
+	Text="Type: "
+	SemanticProperties.HeadingLevel="Level2"
+	FontSize="18"
+	Margin="600,20,0,0"
+	HorizontalOptions="Start" VerticalOptions="Start" />
+
+
+
+		<Entry
+	x:Name="txtEnemyTypeRight"
+	Text="Enemy Type Here"
+	Margin="670,-30,0,0"
+	IsReadOnly="True"
+	HorizontalOptions="Start" 
+	VerticalOptions="Start" />
+
+
+		<Button
+	x:Name="btnRollStrength"
+	Text="Strength"
+	Clicked="RollStrength_Click"
+	Margin="0,470,0,-35"
+	FontSize="32"
+	IsVisible="True"
+	HorizontalOptions="Start" 
+	VerticalOptions="End" />
+
+        <Button
+	x:Name="btnRollDexterity"
+	Text="Dexterity"
+    Clicked="RollDexterity_Click"
+	Margin="-750,-30,0,-65"
+	FontSize="32"
+	IsVisible="True"
+	HorizontalOptions="Center" 
+	VerticalOptions="End" />
+
+        <Button
+	x:Name="btnRollIntelligence"
+	Text="Intelligence"
+    Clicked="RollIntelligence_Click"
+	Margin="370,-2,0,0"
+	FontSize="32"
+	IsVisible="True"
+	HorizontalOptions="Start" 
+	VerticalOptions="End" />
+
+		<Button
+	x:Name="btnRollWisdom"
+	Text="Wisdom"
+    Clicked="RollWisdom_Click"
+	Margin="580,-67,0,0"
+	FontSize="32"
+	IsVisible="True"
+	HorizontalOptions="Start" 
+	VerticalOptions="End" />
+
+		<Label
+	Text="Health: "
+	SemanticProperties.HeadingLevel="Level2"
+	FontSize="18"
+	Margin="0,-110,270,0"
+	HorizontalOptions="End" VerticalOptions="Start" />
+
+		<Entry
+	x:Name="txtDisplayPlayerHealth"
+	Text="Player Health Here"
+	Margin="1000,-32,0,0"
+	IsReadOnly="True"
+	HorizontalOptions="Start" 
+	VerticalOptions="Start" />
+
+		<Label
+	Text="WisdomSuccess: "
+	SemanticProperties.HeadingLevel="Level2"
+	FontSize="18"
+	Margin="0,30,190,0"
+	HorizontalOptions="End" VerticalOptions="Start" />
+
+		<Entry
+	x:Name="txtDisplayWisdomSuccess"
+	Text="WisdomSuccess Here"
+	Margin="1080,-33,0,0"
+	IsReadOnly="True"
+	HorizontalOptions="Start" VerticalOptions="Start" />
+
+		<Button
+	x:Name="btnTargetLeft"
+	Text="Target"
+    Clicked="btnTargetLeft_Click"
+	Margin="50,-500,0,0"
+	FontSize="32"
+	IsVisible="True"
+	HorizontalOptions="Start" 
+	VerticalOptions="End" />
+
+		<Button
+	x:Name="btnTargetCenter"
+	Text="Target"
+    Clicked="btnTargetCenter_Click"
+	Margin="350,-67,0,0"
+	FontSize="32"
+	IsVisible="True"
+	HorizontalOptions="Start" 
+	VerticalOptions="End" />
+
+		<Button
+	x:Name="btnTargetRight"
+	Text="Target"
+    Clicked="btnTargetRight_Click"
+	Margin="650,-67,0,0"
+	FontSize="32"
+	IsVisible="True"
+	HorizontalOptions="Start" 
+	VerticalOptions="End" />
+
+	</VerticalStackLayout>
 </ContentPage>
+	
+	

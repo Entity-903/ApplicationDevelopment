@@ -11,11 +11,11 @@ public partial class CombatUI : ContentPage
         txtEnemyNameLeft.Text = Character.GetEnemies()[0].GetCharacterType().ToString();
         txtEnemyNameCenter.Text = Character.GetEnemies()[1].GetCharacterType().ToString();
         txtEnemyNameRight.Text = Character.GetEnemies()[2].GetCharacterType().ToString();
-
+        
         txtEnemyHealthLeft.Text = Character.GetEnemies()[0].GetHealth().ToString();
         txtEnemyHealthCenter.Text = Character.GetEnemies()[1].GetHealth().ToString();
         txtEnemyHealthRight.Text = Character.GetEnemies()[2].GetHealth().ToString();
-
+        
         txtDisplayPlayerHealth.Text = Character.GetPlayerCharacter().GetHealth().ToString();
         txtDisplayWisdomSuccess.Text = Combat.GetPlayerWisdomSuccess().ToString();
     }
@@ -44,15 +44,13 @@ public partial class CombatUI : ContentPage
 
         if (Combat.GetEnemiesActive() == 0)
         {
-            txtDisplayWinLose.Text = "You have succeeded!";
-            btnTargetLeft.Visible = false;
-            btnTargetCenter.Visible = false;
-            btnTargetRight.Visible = false;
-            btnRollStrength.Visible = false;
-            btnRollDexterity.Visible = false;
-            btnRollIntelligence.Visible = false;
-            btnRollWisdom.Visible = false;
-            btnRollCharisma.Visible = false;
+            btnTargetLeft.IsVisible = false;
+            btnTargetCenter.IsVisible = false;
+            btnTargetRight.IsVisible = false;
+            btnRollStrength.IsVisible = false;
+            btnRollDexterity.IsVisible = false;
+            btnRollIntelligence.IsVisible = false;
+            btnRollWisdom.IsVisible = false;
         }
 
         if (Combat.GetEnemiesActive() != 0)
@@ -69,15 +67,13 @@ public partial class CombatUI : ContentPage
 
         if (Character.GetPlayerExists() == false)
         {
-            txtDisplayWinLose.Text = "You have fallen!";
-            btnTargetLeft.Visible = false;
-            btnTargetCenter.Visible = false;
-            btnTargetRight.Visible = false;
-            btnRollStrength.Visible = false;
-            btnRollDexterity.Visible = false;
-            btnRollIntelligence.Visible = false;
-            btnRollWisdom.Visible = false;
-            btnRollCharisma.Visible = false;
+            btnTargetLeft.IsVisible = false;
+            btnTargetCenter.IsVisible = false;
+            btnTargetRight.IsVisible = false;
+            btnRollStrength.IsVisible = false;
+            btnRollDexterity.IsVisible = false;
+            btnRollIntelligence.IsVisible = false;
+            btnRollWisdom.IsVisible = false;
         }
         else
         {
@@ -111,15 +107,13 @@ public partial class CombatUI : ContentPage
 
         if (Combat.GetEnemiesActive() == 0)
         {
-            txtDisplayWinLose.Text = "You have succeeded!";
-            btnTargetLeft.Visible = false;
-            btnTargetCenter.Visible = false;
-            btnTargetRight.Visible = false;
-            btnRollStrength.Visible = false;
-            btnRollDexterity.Visible = false;
-            btnRollIntelligence.Visible = false;
-            btnRollWisdom.Visible = false;
-            btnRollCharisma.Visible = false;
+            btnTargetLeft.IsVisible = false;
+            btnTargetCenter.IsVisible = false;
+            btnTargetRight.IsVisible = false;
+            btnRollStrength.IsVisible = false;
+            btnRollDexterity.IsVisible = false;
+            btnRollIntelligence.IsVisible = false;
+            btnRollWisdom.IsVisible = false;
         }
 
         if (Combat.GetEnemiesActive() != 0)
@@ -136,15 +130,13 @@ public partial class CombatUI : ContentPage
 
         if (Character.GetPlayerExists() == false)
         {
-            txtDisplayWinLose.Text = "You have fallen!";
-            btnTargetLeft.Visible = false;
-            btnTargetCenter.Visible = false;
-            btnTargetRight.Visible = false;
-            btnRollStrength.Visible = false;
-            btnRollDexterity.Visible = false;
-            btnRollIntelligence.Visible = false;
-            btnRollWisdom.Visible = false;
-            btnRollCharisma.Visible = false;
+            btnTargetLeft.IsVisible = false;
+            btnTargetCenter.IsVisible = false;
+            btnTargetRight.IsVisible = false;
+            btnRollStrength.IsVisible = false;
+            btnRollDexterity.IsVisible = false;
+            btnRollIntelligence.IsVisible = false;
+            btnRollWisdom.IsVisible = false;
         }
         else
         {
@@ -178,15 +170,13 @@ public partial class CombatUI : ContentPage
 
         if (Combat.GetEnemiesActive() == 0)
         {
-            txtDisplayWinLose.Text = "You have succeeded!";
-            btnTargetLeft.Visible = false;
-            btnTargetCenter.Visible = false;
-            btnTargetRight.Visible = false;
-            btnRollStrength.Visible = false;
-            btnRollDexterity.Visible = false;
-            btnRollIntelligence.Visible = false;
-            btnRollWisdom.Visible = false;
-            btnRollCharisma.Visible = false;
+            btnTargetLeft.IsVisible = false;
+            btnTargetCenter.IsVisible = false;
+            btnTargetRight.IsVisible = false;
+            btnRollStrength.IsVisible = false;
+            btnRollDexterity.IsVisible = false;
+            btnRollIntelligence.IsVisible = false;
+            btnRollWisdom.IsVisible = false;
         }
 
         if (Combat.GetEnemiesActive() != 0)
@@ -203,15 +193,13 @@ public partial class CombatUI : ContentPage
 
         if (Character.GetPlayerExists() == false)
         {
-            txtDisplayWinLose.Text = "You have fallen!";
-            btnTargetLeft.Visible = false;
-            btnTargetCenter.Visible = false;
-            btnTargetRight.Visible = false;
-            btnRollStrength.Visible = false;
-            btnRollDexterity.Visible = false;
-            btnRollIntelligence.Visible = false;
-            btnRollWisdom.Visible = false;
-            btnRollCharisma.Visible = false;
+            btnTargetLeft.IsVisible = false;
+            btnTargetCenter.IsVisible = false;
+            btnTargetRight.IsVisible = false;
+            btnRollStrength.IsVisible = false;
+            btnRollDexterity.IsVisible = false;
+            btnRollIntelligence.IsVisible = false;
+            btnRollWisdom.IsVisible = false;
         }
         else
         {
@@ -239,52 +227,6 @@ public partial class CombatUI : ContentPage
 
         Combat.SetWisdomActive(false);
 
-        if (Combat.GetReveals()[0] == true)
-        {
-            txtEnemyStrengthLeft.Text = Character.GetEnemies()[0].GetStrength().ToString();
-            txtEnemyStrengthModifierLeft.Text = Character.GetEnemies()[0].GetStrengthModifier().ToString();
-            txtEnemyDexterityLeft.Text = Character.GetEnemies()[0].GetDexterity().ToString();
-            txtEnemyDexterityModifierLeft.Text = Character.GetEnemies()[0].GetDexterityModifier().ToString();
-            txtEnemyIntelligenceLeft.Text = Character.GetEnemies()[0].GetIntelligence().ToString();
-            txtEnemyIntelligenceModifierLeft.Text = Character.GetEnemies()[0].GetIntelligenceModifier().ToString();
-            txtEnemyConstitutionLeft.Text = Character.GetEnemies()[0].GetConstitution().ToString();
-            txtEnemyConstitutionModifierLeft.Text = Character.GetEnemies()[0].GetConstitutionModifier().ToString();
-            txtEnemyWisdomLeft.Text = Character.GetEnemies()[0].GetWisdom().ToString();
-            txtEnemyWisdomModifierLeft.Text = Character.GetEnemies()[0].GetWisdomModifier().ToString();
-            txtEnemyCharismaLeft.Text = Character.GetEnemies()[0].GetCharisma().ToString();
-            txtEnemyCharismaModifierLeft.Text = Character.GetEnemies()[0].GetCharismaModifier().ToString();
-        }
-        if (Combat.GetReveals()[1] == true)
-        {
-            txtEnemyStrengthCenter.Text = Character.GetEnemies()[1].GetStrength().ToString();
-            txtEnemyStrengthModifierCenter.Text = Character.GetEnemies()[1].GetStrengthModifier().ToString();
-            txtEnemyDexterityCenter.Text = Character.GetEnemies()[1].GetDexterity().ToString();
-            txtEnemyDexterityModifierCenter.Text = Character.GetEnemies()[1].GetDexterityModifier().ToString();
-            txtEnemyIntelligenceCenter.Text = Character.GetEnemies()[1].GetIntelligence().ToString();
-            txtEnemyIntelligenceModifierCenter.Text = Character.GetEnemies()[1].GetIntelligenceModifier().ToString();
-            txtEnemyConstitutionCenter.Text = Character.GetEnemies()[1].GetConstitution().ToString();
-            txtEnemyConstitutionModifierCenter.Text = Character.GetEnemies()[1].GetConstitutionModifier().ToString();
-            txtEnemyWisdomCenter.Text = Character.GetEnemies()[1].GetWisdom().ToString();
-            txtEnemyWisdomModifierCenter.Text = Character.GetEnemies()[1].GetWisdomModifier().ToString();
-            txtEnemyCharismaCenter.Text = Character.GetEnemies()[1].GetCharisma().ToString();
-            txtEnemyCharismaModifierCenter.Text = Character.GetEnemies()[1].GetCharismaModifier().ToString();
-        }
-        if (Combat.GetReveals()[2] == true)
-        {
-            txtEnemyStrengthRight.Text = Character.GetEnemies()[2].GetStrength().ToString();
-            txtEnemyStrengthModifierRight.Text = Character.GetEnemies()[2].GetStrengthModifier().ToString();
-            txtEnemyDexterityRight.Text = Character.GetEnemies()[2].GetDexterity().ToString();
-            txtEnemyDexterityModifierRight.Text = Character.GetEnemies()[2].GetDexterityModifier().ToString();
-            txtEnemyIntelligenceRight.Text = Character.GetEnemies()[2].GetIntelligence().ToString();
-            txtEnemyIntelligenceModifierRight.Text = Character.GetEnemies()[2].GetIntelligenceModifier().ToString();
-            txtEnemyConstitutionRight.Text = Character.GetEnemies()[2].GetConstitution().ToString();
-            txtEnemyConstitutionModifierRight.Text = Character.GetEnemies()[2].GetConstitutionModifier().ToString();
-            txtEnemyWisdomRight.Text = Character.GetEnemies()[2].GetWisdom().ToString();
-            txtEnemyWisdomModifierRight.Text = Character.GetEnemies()[2].GetWisdomModifier().ToString();
-            txtEnemyCharismaRight.Text = Character.GetEnemies()[2].GetCharisma().ToString();
-            txtEnemyCharismaModifierRight.Text = Character.GetEnemies()[2].GetCharismaModifier().ToString();
-        }
-
         txtDisplayPlayerHealth.Text = Character.GetPlayerCharacter().GetHealth().ToString();
         txtDisplayWisdomSuccess.Text = Combat.GetPlayerWisdomSuccess().ToString();
     }
@@ -311,5 +253,13 @@ public partial class CombatUI : ContentPage
 }
 
 
-    // If not using randomly generated values, consider changing the damage Calculation to (attackRoll * wisdomSuccess - defenseRoll - enemyConstitution)
-}
+//    // If not using randomly generated values, consider changing the damage Calculation to (attackRoll * wisdomSuccess - defenseRoll - enemyConstitution)
+
+
+
+            //<Image
+            //Source = "zombie.webp"
+            //Scale="0.2"
+            //Margin="150,150,-150,-150"
+            //HorizontalOptions="Start" VerticalOptions="Start"
+            ///>
